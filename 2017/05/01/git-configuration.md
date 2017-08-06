@@ -18,13 +18,15 @@ The file will have its original line endings in your working directory.
 Most guides will recommend using `core.autocrlf true`, which will convert CRLF to LF in the repo, but leave CRLF in the working directory. But there's a catch: if you are already using LF line endings in your editor on Windows, it will convert them to CRLF in the repo, which is the exact opposite of what you want.  
 
 ### Editor
-On Windows I use `notepad` and on macOS I use `nano`. Make sure you keep the `-w` flag which tells Git to wait until you save the message before actually committing.  
+On Windows I use `notepad` and on macOS I use `nano`.
 
 You can also avoid this entirely by just running `git commit -m "I'm a commit message"` (which is what you should be doing all the time).  
 
 ### Hub
 [Hub](https://hub.github.com) is an extension to Git by the GitHub team, allowing you to interface with GitHub from the command line. The `hub.protocol https` setting tells Git to connect to GitHub via `https` instead of `ssh`. If you don't have `ssh` set up, this is the setting to use. If you don't have Hub installed, you don't need this setting.  
 
+
+### `.gitconfig`
 ```
 [user]
   name = Your Name
