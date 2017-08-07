@@ -1,7 +1,7 @@
 # Gists
 > All of my Gists.
 
-I've moved all of my Gists to a GitHub repo, which makes them easier to edit locally and much easier to sort.
+I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfields/gists), which makes them easier to edit locally and much easier to sort.
 
 ## 2017
 
