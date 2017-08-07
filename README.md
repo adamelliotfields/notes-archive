@@ -5,6 +5,9 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 
 ## 2017
 
+### August
+ - [React Redux Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/07/react-redux-notes.md)
+
 ### July
  - [Webpack 3 Code Splitting using Dynamic Imports and React Router](https://github.com/adamelliotfields/gists/blob/master/2017/07/17/webpack-3-code-splitting.md)
  - [Using NVM with Webstorm](https://github.com/adamelliotfields/gists/blob/master/2017/07/15/nvm-webstorm.md)
