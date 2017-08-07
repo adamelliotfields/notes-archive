@@ -1,0 +1,372 @@
+# PHP Notes
+PHP is a programming language that can do all sorts of things: evaluate form data sent from a browser, build custom web content to serve the browser, talk to a database, and even send and receive cookies.
+
+PHP runs on the server. This means that it has access to all the information and files on that machine, which allows it to construct custom HTML pages to send to your browser, handle cookies, and run tasks or perform calculations with data from that website.
+
+PHP originally stood for "Personal Home Page", but now it stands for "PHP Hypertext Processor".
+
+### Echo vs Print
+ - Both Echo and Print output strings.
+ - Echo can take multiple arguments, while print can only take one.
+ - Print always returns the integer 1.
+ - When using double quotes, the PHP interpreter expands the variable showing us the value.
+ - When using single quotes, the interpreter will show the actual variable.
+ - Use the \n escape sequence to get a new line (must be enclosed in double quotes).
+ - PHP code statements must be ended with a semicolon.
+
+```php
+<?php
+  echo "Hello World";
+?>
+```
+
+### [Data Types](http://php.net/manual/en/language.types.php)
+ - **String:** A sequence of characters.
+ - **Integer:** A non-decimal number.
+ - **Float (double):** A number with a decimal point or a number in exponential form.
+ - **Boolean:** true or false.
+ - **Array:** A variable with multiple values.
+ - **Object:** A data type that can store variables and functions.
+ - **NULL:** A variable with no value is defined as NULL.
+ - **Resource:** A special variable holding a reference to an external resource, like a database.
+
+### [`var_dump`](http://php.net/manual/en/function.var-dump.php)
+This function displays structured information about one or more expressions that includes its type and value. Arrays and objects are explored recursively with values indented to show structure.
+
+All public, private and protected properties of objects will be returned in the output unless the object implements a `__debugInfo()` method.
+
+As with anything that outputs its result directly to the browser, the output-control functions can be used to capture the output of this function (e.g., save it in a string).
+
+### [`print_r`](http://php.net/manual/en/function.print-r.php)
+Prints human-readable information about a variable.
+
+### [Strings](http://php.net/manual/en/language.types.string.php)
+ - A string is a word or phrase in between quotes.
+ - Strings can be concatenated using a period `.`.
+ - You can also concatenate a string variable using period equals `.=`.
+
+```php
+$string = "Hello";
+$string .= " ";
+$string .= "World";
+$string .= "\n";
+
+echo $string;
+```
+
+### [Variables](http://php.net/manual/en/language.variables.php)
+ - All variable names in PHP start with the dollar sign.
+ - Variable names cannot start with a number.
+
+```php
+$myName = "Adam";
+```
+
+### [Comments](http://php.net/manual/en/language.basic-syntax.comments.php)
+
+```php
+// this is a single line comment
+#  this is an optional single line comment
+/* this is a multi line comment */
+```
+
+### [Comparisons](http://php.net/manual/en/language.operators.comparison.php)
+
+```php
+$a == $b  // true if $a is equal to $b after type juggling
+$a === $b // true if $a is equal to $b and they are both the same type
+$a != $b  // true if $a is not equal to $b after type juggling
+$a <> $b  // true if $a is not equal to $b after type juggling
+$a !== $b // true if $a is not equal to $b, and they are not the same type
+$a < $b   // true if $a is strictly less than $b
+$a > $b   // true if $a is strictly greater than $b
+$a <= $b  // true if $a is less than or equal to $b
+$a >= $b  // true if $a is greater than or equal to $b
+$a <=> $b // 0 if $a == $b; -1 if $a < $b; 1 if $a > $b
+```
+
+### [Logical Operators](http://php.net/manual/en/language.operators.logical.php)
+
+```php
+$a and $b // true if both $a and $b are true
+$a or $b  // true if either $a or $b is true
+$a xor $b // true if either $a or $b is true, but not both
+! $a      // true if $a is not true
+$a && $b  // true if both $a and $b are true
+$a || $b  // true if either $a or $b is true
+```
+
+### [Operator Precedence](http://php.net/manual/en/language.operators.precedence.php)
+The precedence of an operator specifies how "tightly" it binds two expressions together. For example, in the expression `1 + 5 * 3`, the answer is `16` and not `18` because the multiplication `*` operator has a higher precedence than the addition `+` operator. Parentheses may be used to force precedence, if necessary. For instance: `(1 + 5) * 3` evaluates to `18`.
+
+When operators have equal precedence their associativity decides how the operators are grouped. For example `-` is left-associative, so `1 - 2 - 3` is grouped as `(1 - 2) - 3` and evaluates to `-4`. `=` on the other hand is right-associative, so `$a = $b = $c` is grouped as `$a = ($b = $c)`.
+
+Operators of equal precedence that are non-associative cannot be used next to each other, for example `1 < 2 > 1` is illegal in PHP. The expression `1 <= 1 == 1` on the other hand is legal, because the `==` operator has lesser precedence than the `<=` operator.
+
+Use of parentheses, even when not strictly necessary, can often increase readability of the code by making grouping explicit rather than relying on the implicit operator precedence and associativity.
+
+### [Control Structures](http://php.net/manual/en/language.control-structures.php)
+Any PHP script is built out of a series of statements. A statement can be an assignment, a function call, a loop, a conditional statement or even a statement that does nothing (an empty statement). Statements usually end with a semicolon. In addition, statements can be grouped into a statement-group by encapsulating a group of statements with curly braces. A statement-group is a statement by itself as well. The various statement types are described in this chapter.
+
+### [Arrays](http://php.net/manual/en/language.types.array.php)
+ - An array is a list of items allowing you to store multiple items in a single variable.
+ - Array syntax in PHP is different than in JavaScript or Python. When declaring an array, you must use the array() method.
+ - When accessing arrays you can use square brackets or curly braces.
+ - Arrays are mutable and each item can be changed by specifying the position and providing a new value.
+ - You can remove array items with the unset() method, and even delete the entire array.
+
+```php
+$myArray = array(1, 2, 3);
+echo $myArray[0];
+
+$myArray[3] = "three";
+
+unset($myArray[3]);
+```
+
+### Associative Arrays
+ - An associative array makes use of key => value pairs using the Associative Array Operator (=>).
+ - PHP treats both arrays and associative arrays the same.
+ - A PHP Associative Array is similar to a JavaScript Object Literal or a Python Dictionary (with the notable exception that Objects and Dictionaries are wrapped in curly braces).
+ - An Associative Array is also called a map.
+
+### Associative Array Operator
+ - The Array Operator (=>) is used to set values into a corresponding key in an array.
+
+```php
+$myM3 = array(
+'year' => 2013,
+'color' => "Black",
+'doors' => 2  
+);
+```
+
+### Accessing Associative Arrays
+ - When accessing the value in an associative array, you would use the key instead of the index.
+ - You can also change the value of an existing key or add a new key-value pair this way.
+ - A new key-value pair will be added to the end of the array, similar to the array_push() method.
+
+```php
+$myM3['make'] = 'BMW';
+```
+
+### Multidimensional Arrays
+ - Simply put, a Multidimensional Array is an array of arrays.
+ - Each array is a row (starting at 0).
+ - To access an item, use the row and the index of the array in that row.
+ - You can also add new arrays to the Multidimensional Array using similar syntax.
+
+```php
+$myCars = array(
+  array("BMW", "335i", "2010"),
+  array("BMW", "M3", "2013"),
+  array("BMW", "550i", "2016")
+);
+
+$myCars[3] = array("BMW", "M5", "2019");
+
+echo $myCars[3][2] . " " . $myCars[3][0] . " " . $myCars[3][1];
+```
+
+### [Functions](http://us3.php.net/manual/en/language.functions.php)
+Any valid PHP code may appear inside a function, even other functions and class definitions.
+
+```php
+function name(parameters) {
+  statement;
+}
+```
+
+### [Return](http://php.net/manual/en/function.return.php)
+ - `return` returns program control to the calling module. Execution resumes at the expression following the called module's invocation.
+ - If called from within a function, the `return` statement immediately ends execution of the current function, and returns its argument as the value of the function call. `return` also ends the execution of an `eval()` statement or script file.
+ - If called from the global scope, then execution of the current script file is ended.
+
+### [Function Arguments](http://php.net/manual/en/functions.arguments.php)
+ - Information may be passed to functions via the argument list, which is a comma-delimited list of expressions.
+ - The arguments are evaluated from left to right.
+ - PHP supports passing arguments by value (the default), passing by reference, and default argument values.
+ - Variable-length argument lists are also supported.
+
+### Default Arguments
+ - A function may define C++-style default values for scalar arguments.
+
+```php
+function makecoffee($type = "cappuccino") {
+  return "Making a cup of $type.";
+}
+
+echo makecoffee();
+```
+
+### Reference Arguments
+ - By default, arguments are passed by value; the value of the argument is changed within the function, but not globally. 
+ - To have an argument changed globally, pass by reference by prepending an ampersand to the argument name.
+
+```php
+function add_some_extra(&$string) {
+  $string .= 'and something extra.';
+}
+
+$str = 'This is a string, ';
+
+add_some_extra($str);
+
+echo $str; // This is a string, and something extra.
+```
+
+### [`Variable Functions`](http://php.net/manual/en/functions.variable-functions.php)
+If a variable name has parenthesis appended to it, PHP will look for a function with the same name as whatever the variable evalutes to.
+
+```php
+function hello() {
+  echo "Hello World";
+}
+
+$func = 'hello';
+
+$func(); // Hello World
+```
+
+### [`Anonymous Functions`](http://us1.php.net/manual/en/functions.anonymous.php)
+Anonymous functions, also known as closures, allow the creation of functions which have no specified name. They are most useful as the value of callback parameters.
+
+### Objects
+ - **Properties:** The variables in an object are its properties.
+ - **Methods:** The functions in an object are its methods.
+ - **Class:** A template for making an object.
+ - **Instance:** An object that has been created by a class using the new keyword.
+ - **Constructor:** A method used for creating objects with different properties.
+
+### Member Visibility
+ - **Public:** A class member declared public can be accessed anywhere.
+ - **Protected:** A class member declared protected can be accessed by the class itself and by any inherited classes.
+ - **Private:** A class member declared private may only be accessed by the class that defines the member.
+
+### Object Operator
+ - The Object Operator (->) is used to access properties and methods of an object.
+ - Note that you do not use $ when accessing a property.
+
+### `$this` in PHP
+ - `$this` is a pseudo-variable that is available when a method is called from within an object.
+ - `$this` is a reference to the calling object.
+
+### Class Syntax
+
+```php
+class SimpleClass {
+  public $var = 'value';
+  public function displayVar() {
+    echo $this->var;
+  }
+}
+```
+
+### Instance Syntax
+
+```php
+$obj1 = new Classname();
+```
+
+### Constructor Syntax
+
+```php
+""" constructor methods are always named __construct() """
+
+public function __construct($prop1, $prop2) {
+  $this->prop1 = $prop1;
+  $this->prop2 = $prop2;
+}
+```
+
+### Class and Object Methods
+
+```php
+is_a($adam, "Person") # used to discover if an object is an instance of a particular class
+property_exists($adam, "name") # used to discover if an object has a given property
+method_exists($adam, "greeting") # used to discover if an object has a given method
+```
+
+### Inheritance
+ - Inheritance is a way for for one class to take on the properties/methods of another class.
+ - Use the extends keyword to create a new class that inherits the existing properties of another class.
+ - A parent class is also known as a superclass; a child class is also known as a subclass.
+
+### Inheritance Syntax
+
+```php
+class Shape {
+  public $sides = true;
+}
+
+class Square extends Shape {
+}
+
+$square = new Square();
+```
+
+### Overriding Parent Methods
+ - A child class can override a method or property in a parent class.
+ - A parent class can prevent its methods from being overridden using the final keyword.
+
+```php
+class Square extends Shape {
+  public $sides = 4;
+}
+
+class Shape {
+  final public $sides = true;
+}
+```
+
+### Constants
+ - Constants are variables that do not change.
+ - Constants within a class are prefixed with the const keyword.
+ - Global Constants are defined using the define() function and passing in 2 arguments: the constant name and value.
+ - The default visibility of a Class Constant is public.
+ - By convention (per the PHP docs), constant names should be UPPERCASE.
+ - Note that constants do not start with the $ symbol, unlike variables.
+
+### Static Variables
+The static keyword before a property or method within a class will allow you to access that particular method/property using the Scope Resolution Operator.
+
+### Scope Resolution Operator
+ - The Scope Resolution Operator (::) acts similarly to the Object Operator (->), allowing you to access the static or constant properties/methods of a class.
+ - This is useful because you do not need to create an instance of a class in order to access it's properties/methods.
+
+```php
+class Person {
+  const ALIVE = true;
+  public static $parents = 2;
+}
+
+echo Person::ALIVE;
+
+echo Person::$parents;
+```
+
+### `self` vs `$this`
+ - `this` is used to reference the current object.
+ - `self` is used to access the current class itself.
+
+### [Magic Methods](http://php.net/manual/en/language.oop5.magic.php)
+ - PHP offers several "magic methods".
+ - The "magic" comes from the fact that they are triggered by an action instead of called directly.
+ - All magic methods are prepended with `__`
+
+### [Magic Constants](http://php.net/manual/en/language.constants.predefined.php)
+ - PHP has 9 magic constants that change depending on where they are used. 
+ - Magic constants are resolved at compile time, unlike regular constants that are resolved at runtime. 
+
+### [Collections](http://php.net/manual/en/class.ds-collection.php)
+ - A Collection class is an OOP replacement for the traditional array data structure.
+ - Much like an array, a collection contains member elements, although these tend to be objects rather than simpler types such as strings and integers.
+ - The general characteristics of a collection class are:
+   - Establishes a wrapper around a array of objects.
+   - Collections are mutable – new elements may be added and existing elements may be modified or removed.
+   - Sorting algorithms are unstable (which means the order for equal elements is undefined).
+   - Can use lazy instantiation to save system resources.
+
+### [SplObjectStorage](http://php.net/manual/en/class.splobjectstorage.php)
+ - The SplObjectStorage class provides a map from objects to data or, by ignoring data, an object set.
+ - This dual purpose can be useful in many cases involving the need to uniquely identify objects.
