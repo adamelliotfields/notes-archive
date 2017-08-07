@@ -9,7 +9,7 @@ Redux has three principles:
     - The state of your application is stored in an object tree within a single store.
  2. **State is read-only**
     - The only way to change state is to emit an action - an object describing what happened.
- 3. ** Changes are made with pure functions**
+ 3. **Changes are made with pure functions**
     - To specify how the state tree is transformed by actions, you write pure reducers.
 
 ### Store
