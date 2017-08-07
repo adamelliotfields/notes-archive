@@ -77,7 +77,7 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
  - [React Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/26/react-notes.md)
  - [ES2015 Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/25/es2015-notes.md)
  - [AJAX Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/24/ajax-notes.md)
- - [JavaScript Web API Reference](https://github.com/adamelliotfields/gists/blob/master/2017/02/27/javascript-web-api-reference.md)
+ - [JavaScript Web API Reference](https://github.com/adamelliotfields/gists/blob/master/2017/02/22/javascript-web-api-reference.md)
  - [Sass](https://github.com/adamelliotfields/gists/blob/master/2017/02/16/sass.md)
  - [Homebrew](https://github.com/adamelliotfields/gists/blob/master/2017/02/13/homebrew.md)
  - [Codecademy Command Line Commands](https://github.com/adamelliotfields/gists/blob/master/2017/02/12/codecademy-command-line-commands.md)
