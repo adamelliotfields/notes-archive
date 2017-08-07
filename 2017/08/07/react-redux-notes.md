@@ -76,6 +76,8 @@ Reducers must remain pure, which means their arguments should never be mutated, 
 
 Most Redux Reducer examples use `switch` statements, but you do not have to follow that pattern (although it does look better than a bunch of chained `if`/`else if`/`else` statements). Typically you'll want to return the state object in your `default` or `else` block (i.e., if your action type was not recognized).
 
+Conventionally, reducers are named after the state properties they manage. Your app can have a single reducer; although it is more common to split your reducers up to each individually manage a state property. When using multiple reducers, use the `combineReducers()` method to compose your reducers into a single reducing function. The resulting reducer will call each child reducer and concatenate their results into a single state object. `combineReducers` is passed an object with each reducer as a property, and thus, it is popular to use ES6 property shorthand syntax, e.g., `combineReducers({ todos, filter })`.
+
 ```javascript
 // The individual todo object
 const todo = (state, action) => {
