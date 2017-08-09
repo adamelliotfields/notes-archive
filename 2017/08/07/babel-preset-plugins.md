@@ -1,7 +1,41 @@
 # Babel Preset Plugins
 This is a list of all the plugins included with various Babel presets.
 
-Alternatively, you can use `babel-preset-env` and supply the browsers you wish to target. Note that `babel-preset-env` does not include any `stage` plugins.
+Using the presets is super convenient, but if you don't need to target browsers that don't support ES6 (like IE, or 2 year old versions of Chrome), you're compiling more than you need to and also significantly bloating your code. For example, a single React class component with an async/await `axios` request and a for...of loop went from 30 lines of code to 110 when using all of the presets (not to mention adding unnecessary polyfills).
+
+### `babel-preset-env`
+You can use `babel-preset-env` and supply the browser(s) you wish to target. I've found Chrome to be the most accurate. Targeting Firefox or Opera was not accurate at all (the version numbers were way off). Edge and Safari were fairly accurate, but the differences between Edge 14 and 15, or Safari 9 and 10 are pretty significant. When in doubt, just try out some code snippets in the Babel [REPL](https://babeljs.io/repl).
+
+Using `babel-preset-env` also has the benefit of selectively polyfilling based on the browser environment. You will need to install `babel-polyfill` and import it in your main entry file. The import statement will be converted to individual import statements for only the polyfills you need. You will also need to install and import `regenerator` if you're targeting browsers that don't support generator functions.
+
+Note that `babel-preset-env` does not include any `stage` plugins or experimental polyfills.
+
+`.babelrc`
+```json
+{
+  "presets": [
+    [ "env", {
+      "targets": {
+        "chrome": 51
+      },
+      "modules": false,
+      "useBuiltIns": true
+    }]
+  ]
+}
+```
+
+This will use the `es2016` and `es2017` presets as well as the following CoreJS polyfills:
+ - es7.object.values
+ - es7.object.entries
+ - es7.object.get-own-property-descriptors
+ - es7.string.pad-start
+ - es7.string.pad-end
+ - web.timers
+ - web.immediate
+ - web.dom.iterable
+
+If you need to target older browsers, `{ "chrome": 40 }` is pretty much the same as using the `es2015`, `es2016`, and `es2017` presets.
 
 ### `babel-preset-es2015`
 > v6.24.1
@@ -137,23 +171,24 @@ Alternatively, you can use `babel-preset-env` and supply the browsers you wish t
 ### Plugin Requirement Table
 Here is a table showing which plugins you need to target specific browser versions (desktop browsers only, for brevity).
 
-ES6 features like Promises, generator functions, `Object.assign`, or `Array.prototype.includes` can by polyfilled by including `babel-polyfill` in your main entry file (`index.js`).
+ES6 features like Promises, generator functions, `Object.assign`, or `Array.prototype.includes` can by polyfilled by including `babel-polyfill` in your main entry file.
 
-Experimental features commonly used in React such as class property initializers and decorators will require a plugin to work in any modern browser.
+Experimental features commonly used in React such as class property initializers and decorators will require a Babel plugin to work in any modern browser. Chrome 60 is currently the only browser that supports the object spread/rest operator, so you should probably include the Babel plugin for it as well.
 
-| Babel Transform           | Reference                                                                                            | Chrome | Firefox | Opera | Edge       | Safari     |
-|---------------------------|------------------------------------------------------------------------------------------------------|--------|---------|-------|------------|------------|
-| `arrow-functions`         | http://caniuse.com/#feat=arrow-functions                                                             | < 45   | < 22    | < 32  | < 12       | < 10       |
-| `block-scoping`           | http://caniuse.com/#feat=const                                                                       | < 49   | < 36    | < 36  | < 12       | < 10       |
-| `classes`                 | http://caniuse.com/#feat=es6-class                                                                   | < 49   | < 45    | < 36  | < 12       | < 9        |
-| `computed-properties`     | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer       | < 44   | < 34    | < 34  | < 12       | < 7.1      |
-| `destructuring`           | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment | < 49   | < 34    | < 36  | < 12       | < 10       |
-| `for-of`                  | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of                | < 51   | < 13    | < 25  | < 12       | < 7.1      |
-| `parameters`              | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters       | < 49   | < 15    | < 45  | < 12       | < 10       |
-| `shorthand-properties`    | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer       | < 42   | < 34    | < 34  | < 12       | < 9        |
-| `spread`                  | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator          | < 49   | < 34    | < 37  | < 15       | < 10       |
-| `template-literals`       | http://caniuse.com/#feat=template-literals                                                           | < 41   | < 34    | < 29  | < 13       | < 9.1      |
-| `regenerator`             | http://caniuse.com/#feat=es6-generators                                                              | < 39   | < 26    | < 26  | < 13       | < 10       |
-| `exponentiation-operator` | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators     | < 52   | < 52    | < 39  | < 14       | < 10.1     |
-| `object-rest-spread`      | http://kangax.github.io/compat-table/esnext/#test-object_rest/spread_properties                      | < 60   | < 55    | < 47  | No support | No support |
-| `async-to-generator`      | http://caniuse.com/#feat=async-functions                                                             | < 55   | < 52    | < 42  | < 15       | < 10.1     |
+Browser versions below are based on what `babel-preset-env` will transpile. For example, Babel will transpile arrow functions when targeting Chrome 46 and below.
+
+| Babel Transform           | Chrome | Edge | Safari |
+|---------------------------|--------|------|--------|
+| `arrow-functions`         | < 47   | < 13 | < 10   |
+| `block-scoping`           | < 49   | < 14 | < 10   |
+| `classes`                 | < 46   | < 13 | < 10   |
+| `computed-properties`     | < 44   | < 12 | < 8    |
+| `destructuring`           | < 51   | < 15 | < 10   |
+| `for-of`                  | < 51   | < 15 | < 10   |
+| `parameters`              | < 49   | < 14 | < 10   |
+| `shorthand-properties`    | < 43   | < 12 | < 9    |
+| `spread`                  | < 46   | < 13 | < 10   |
+| `template-literals`       | < 41   | < 13 | < 9    |
+| `regenerator`             | < 50   | < 13 | < 10   |
+| `exponentiation-operator` | < 52   | < 14 | < 10.1 |
+| `async-to-generator`      | < 55   | < 15 | < 10.1 |
