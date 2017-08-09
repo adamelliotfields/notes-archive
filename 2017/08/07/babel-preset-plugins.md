@@ -4,7 +4,7 @@ This is a list of all the plugins included with various Babel presets.
 Using the presets is super convenient, but if you don't need to target browsers that don't support ES6 (like IE, or 2 year old versions of Chrome), you're compiling more than you need to and also significantly bloating your code. For example, a single React class component with an async/await `axios` request and a for...of loop went from 30 lines of code to 110 when using all of the presets (not to mention adding unnecessary polyfills).
 
 ### `babel-preset-env`
-You can use `babel-preset-env` and supply the browser(s) you wish to target. I've found Chrome to be the most accurate. Targeting Firefox or Opera was not accurate at all (the version numbers were way off). Edge and Safari were fairly accurate, but the differences between Edge 14 and 15, or Safari 9 and 10 are pretty significant. When in doubt, just try out some code snippets in the Babel [REPL](https://babeljs.io/repl).
+You can use `babel-preset-env` and supply the browser(s) you wish to target. I've included a table at the bottom showing which transformations will be applied based on the targeted browser(s).
 
 Using `babel-preset-env` also has the benefit of selectively polyfilling based on the browser environment. You will need to install `babel-polyfill` and import it in your main entry file. The import statement will be converted to individual import statements for only the polyfills you need. You will also need to install and import `regenerator` if you're targeting browsers that don't support generator functions.
 
@@ -34,8 +34,6 @@ This will use the `es2016` and `es2017` presets as well as the following CoreJS 
  - web.timers
  - web.immediate
  - web.dom.iterable
-
-If you need to target older browsers, `{ "chrome": 40 }` is pretty much the same as using the `es2015`, `es2016`, and `es2017` presets.
 
 ### `babel-preset-es2015`
 > v6.24.1
@@ -169,26 +167,32 @@ If you need to target older browsers, `{ "chrome": 40 }` is pretty much the same
    - Compiles the function bind operator (`::`) to ES5.
 
 ### Plugin Requirement Table
-Here is a table showing which plugins you need to target specific browser versions (desktop browsers only, for brevity).
+This table shows which browser versions `babel-preset-env` will apply the specific transformation to. For example, `const` will be converted to `var` in Chrome versions less than 49.
 
-ES6 features like Promises, generator functions, `Object.assign`, or `Array.prototype.includes` can by polyfilled by including `babel-polyfill` in your main entry file.
+iOS Safari and Android Chrome match their desktop counterparts.
 
-Experimental features commonly used in React such as class property initializers and decorators will require a Babel plugin to work in any modern browser. Chrome 60 is currently the only browser that supports the object spread/rest operator, so you should probably include the Babel plugin for it as well.
+ES6 features like `Promise`, `Object.assign`, or `Array.prototype.includes` can by polyfilled; however, new syntax like arrow functions or keywords like `class` cannot.
 
-Browser versions below are based on what `babel-preset-env` will transpile. For example, Babel will transpile arrow functions when targeting Chrome 46 and below.
+Experimental features commonly used in React such as class property initializers and decorators will require a Babel plugin to work in any modern browser.
 
-| Babel Transform           | Chrome | Edge | Safari |
-|---------------------------|--------|------|--------|
-| `arrow-functions`         | < 47   | < 13 | < 10   |
-| `block-scoping`           | < 49   | < 14 | < 10   |
-| `classes`                 | < 46   | < 13 | < 10   |
-| `computed-properties`     | < 44   | < 12 | < 8    |
-| `destructuring`           | < 51   | < 15 | < 10   |
-| `for-of`                  | < 51   | < 15 | < 10   |
-| `parameters`              | < 49   | < 14 | < 10   |
-| `shorthand-properties`    | < 43   | < 12 | < 9    |
-| `spread`                  | < 46   | < 13 | < 10   |
-| `template-literals`       | < 41   | < 13 | < 9    |
-| `regenerator`             | < 50   | < 13 | < 10   |
-| `exponentiation-operator` | < 52   | < 14 | < 10.1 |
-| `async-to-generator`      | < 55   | < 15 | < 10.1 |
+| Babel Transform           | Chrome | Firefox | Edge | Safari |
+|---------------------------|--------|---------|------|--------|
+| `arrow-functions`         | < 47   | < 45    | < 13 | < 10   |
+| `block-scoping`           | < 49   | < 51    | < 14 | < 10   |
+| `classes`                 | < 46   | < 45    | < 13 | < 10   |
+| `computed-properties`     | < 44   | < 34    | < 12 | < 8    |
+| `destructuring`           | < 51   | < 53    | < 15 | < 10   |
+| `duplicate-keys`          | < 42   | < 34    | < 12 | < 9    |
+| `for-of`                  | < 51   | < 53    | < 15 | < 10   |
+| `literals`                | < 44   | < 53    | < 12 | < 9    |
+| `object-super`            | < 46   | < 45    | < 13 | < 10   |
+| `parameters`              | < 49   | < 53    | < 14 | < 10   |
+| `shorthand-properties`    | < 43   | < 33    | < 12 | < 9    |
+| `spread`                  | < 46   | < 36    | < 13 | < 10   |
+| `sticky-regex`            | < 49   | < 3     | < 13 | < 10   |
+| `template-literals`       | < 41   | < 34    | < 13 | < 9    |
+| `typeof-symbol`           | < 38   | < 36    | < 12 | < 9    |
+| `unicode-regex`           | < 50   | < 46    | < 13 | < 10   |
+| `regenerator`             | < 50   | < 53    | < 13 | < 10   |
+| `exponentiation-operator` | < 52   | < 52    | < 14 | < 10.1 |
+| `async-to-generator`      | < 55   | < 53    | < 15 | < 10.1 |
