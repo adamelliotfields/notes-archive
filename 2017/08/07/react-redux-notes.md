@@ -106,3 +106,24 @@ const todos = (state = [], action) => {
   }
 };
 ```
+
+### Scaffolding
+While Redux is completely unopinionated, the examples in the docs use this folder structure:
+
+```bash
+src
+├── actions    # action creators and optionally action types
+├── components # "dumb" components that are unaware of Redux
+├── containers # "smart" components connected to Redux
+├── reducers   # file names should correspond to state key
+└── store      # invoke createStore here
+```
+
+*Note: Action Creators and Action Types can be defined in `actions/index.js` and exported individually as named exports. Reducers are typically defined in individual files, with `combineReducers` as the default export in `reducers/index.js`.*
+
+### React Redux
+React Redux is the official React binding for Redux, developed by the [React Community](https://github.com/reactjs). React Redux embraces the idea of separating presentational ("dumb") components and container components ("smart").
+
+Presentational components are not connected to Redux and receive data and functions as props.
+
+Container components are "generated" by the React Redux `connect()` method, which subscribes them to the Redux store. These components also dispatch Redux actions.
