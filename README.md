@@ -6,6 +6,7 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 ## 2017
 
 ### August
+ - [Java Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/14/java-notes.md)
  - [Babel Preset Plugins](https://github.com/adamelliotfields/gists/blob/master/2017/08/07/babel-preset-plugins.md)
  - [React Redux Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/07/react-redux-notes.md)
 
