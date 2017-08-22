@@ -256,6 +256,107 @@ myArray[0] = 100;
 int[] myArray = {
   100, 200, 300
 };
+
+// array for each loop
+for (int item : array) {
+  System.out.println(item);
+}
+```
+
+Note that arrays do not have functional methods like `map` and `forEach`. You'll need to convert the
+array to a Collections object to access them.
+
+```java
+int[] primes = { 2, 3, 5, 7 };
+
+List<Integer> primesList = Arrays.asList(primes);
+
+primesList.forEach(System.out::println);
+```
+
+You can also use the `Arrays.stream()` static method to return a sequential Stream.
+
+```java
+int[] numbers = { 1, 2, 3, 4 };
+
+Arrays.stream(numbers)
+  .map(item -> item * 2)
+  .forEach(System.out::println)
+```
+
+Note that the object returned from the Arrays methods inherits from AbstractList, not ArrayList, and
+thus does not inherit all of the methods of ArrayList. You'll need to create a new ArrayList if you
+need one.
+
+Using a primitive array:
+
+```java
+int[] numbers = { 1, 2, 3, 4 };
+
+// You cannot pass a primitive array to the ArrayList constructor
+// You'll have to manually add the array items
+List<Integer> numbersList = new ArrayList<>();
+
+Arrays
+  .stream(numbers)
+  .forEach(numbersList::add);
+
+numbersList
+  .map(item -> item * 2)
+  .forEach(System.out::println);
+```
+
+Using a class array:
+
+```java
+// If possible, use the wrapper class for the primitive type
+Integer[] numbers = { 1, 2, 3, 4 };
+
+List<Integer> numbersList = new ArrayList<>(Arrays.asList(numbers));
+
+numbersList
+  .map(item -> item * 2)
+  .forEach(System.out::println);
+```
+
+### Enum
+An Enum Type is a special data type that enables for a variable to be a set of predefined constants.
+The variable must be equal to one of the values that have been predefined for it.
+
+Enum constants are implicitly static and final. The enum constructor can only be package-private (no
+modifier) or private.
+
+```java
+public enum Day {
+  MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+}
+```
+
+You can specify enum constant values at creation. Values can be accessed by the enum `values()` static
+method which returns an array of values in the order they were defined. The `value` property on each
+constant returns the value.
+
+```java
+public enum StockSymbol {
+  APPLE("AAPL"),
+  GOOGLE("GOOG"),
+  MICROSOFT("MSFT"),
+  AMAZON("AMZN");
+
+  String value;
+
+  StockSymbol(String value) {
+    this.value = value;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Arrays
+      .stream(StockSymbol.values())
+      .forEach(item -> System.out.println(item + ": " + item.value));
+  }
+}
 ```
 
 ### Classes
@@ -314,6 +415,16 @@ public class Person {
 }
 ```
 
+### Static Fields
+Normally, when instantiating a class, the new object will have its own copies of the super class'
+fields. Sometimes, you want to have fields common to all sub classes. Use the static keyword to do
+this.
+
+Typically, static variables will be constants (their value cannot be changed after assignment). In
+order to ensure immutability, use the final keyword as well.
+
+By convention, constants are named in uppercase.
+
 ### Method Overloading
 Method overloading is the process of assigning multiple methods with the same name, but different signatures.
 
@@ -371,6 +482,13 @@ Access level modifiers determine whether other classes can use a particular fiel
 particular method. There are two levels of access control:
  - top level: `public` or package-private (no modifier)
  - member level: `public`, `private`, `protected`, or package-private
+
+| Modifier        | Class | Package | Subclass | World |
+|-----------------|-------|---------|----------|-------|
+| public          | yes   | yes     | yes      | yes   |
+| protected       | yes   | yes     | yes      | no    |
+| package private | yes   | yes     | no       | no    |
+| private         | yes   | no      | no       | no    |
 
 ### Encapsulation
 Encapsulation is the practice of making data fields private so they cannot be accessed or modified
@@ -462,9 +580,9 @@ drink methods.
 Abstraction is one of the four pillars of object oriented programming.
 
 ```java
-public abstract Human {
+public abstract class Human {
   public void sleep(int hours) {
-    // do something
+    System.out.println("Goodnight.");
   }
 
   public abstract void eat();
@@ -475,10 +593,12 @@ public class Person extends Human {
   private int isHungry = true;
   private int isThirsty = true;
 
+  @Override
   public void eat() {
     this.isHungry = false;
   }
 
+  @Override
   public void drink() {
     this.isThirsty = false;
   }
@@ -486,8 +606,11 @@ public class Person extends Human {
 ```
 
 ### Interfaces
-Interfaces are *implemented*, while classes are *extended*. Interfaces are useful in that a sub
-class can only extend one super class; however, a class can implement multiple interfaces.
+Interfaces are *implemented*, while classes are *extended*. Interfaces represent a *can a*
+relationship.
+
+Interfaces are useful in that a sub class can only extend one super class; however, a class can
+implement multiple interfaces.
 
 Implementing an interface forms a contract in a way that the class must define all methods in the
 interface in order to be compiled. In the future, if you add a method to an interface, you'll have
@@ -497,8 +620,10 @@ For example, if a Human eats and drinks, then a Person implementing the Human
 interface must also eat and drink in order to be defined as a Human. The Human interface does not
 define the behavior of eating or drinking; that is left up to the implementing class.
 
-Starting in Java 8, an interface can also have `default` methods which can be overridden by the
-implementing class.
+Starting in Java 8, an interface can also have default methods which can be used or overridden by the
+implementing class. In many cases, an interface can be used instead of an abstract class now. The
+key difference is that a method in an interface is inherently public; whereas an abstract class may
+have public, private, or protected methods.
 
 ```java
 public interface Human {
@@ -519,3 +644,67 @@ public class Person implements Human {
   }
 }
 ```
+
+### Nested Classes
+A class defined within another class is a nested class. Nested classes make sense when a particular
+class is only used by one other class. By defining the class within the consuming class, it makes
+your code more maintainable (instead of having a separate file).
+
+There are two types of nested classes: static nested classes and inner classes (non-static). Static
+nested classes do not have access to other members of the enclosing class. Inner classes do have
+access to other members of the enclosing class, even if they are declared private.
+
+There are two types of inner classes: local and anonymous. Local classes are typically defined in
+the body of a method (or even a loop or conditional statement). Anonymous classes are like local
+classes, except they are declared and instantiated at the same time and do not have a name.
+
+Anonymous classes can be created from either classes (including abstract) or interfaces.
+
+```java
+public class HelloWorldClasses {
+  // Private member variables may be accessed by inner classes
+  private String helloWorldEnglish = "Hello World";
+  private String helloWorldFrench = "Tout le Monde";
+
+  // Inner interface
+  interface HelloWorld {
+    public void greet();
+  }
+
+  public void sayHello() {
+    // Local inner class declared within method body
+    class EnglishGreeting implements HelloWorld {
+      public void greet() {
+        System.out.println(helloWorldEnglish);
+      }
+    }
+
+    // englishGreeting is instantiated after being declared
+    HelloWorld englishGreeting = new EnglishGreeting();
+
+    // Anonymous inner class
+    // Declared and instantiated at the same time
+    HelloWorld frenchGreeting = new HelloWorld() {
+      public void greet() {
+        System.out.println(helloWorldFrench);
+      }
+    };
+
+    englishGreeting.greet();
+    frenchGreeting.greet();
+  }
+}
+```
+
+### Packages
+Packages are groups of class files organized by namespace. Packages are conventionally named by
+reverse domain name, e.g., com.domainname.applicationname.packagename.
+
+For example, com.adamelliotfields.package or com.github.adamelliotfields.package.
+
+For personal projects where your package will never be consumed by anyone else, you can name your
+package anything.
+
+### Modules
+A module is a group of packages that can also contain class, resource, and property/configuration files as
+well.
