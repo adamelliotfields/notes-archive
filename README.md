@@ -6,6 +6,7 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 ## 2017
 
 ### August
+ - [Gradle Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/24/gradle-notes.md)
  - [Maven Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/22/maven-notes.md)
  - [Treehouse Techdegree Projects](https://github.com/adamelliotfields/gists/blob/master/2017/08/21/treehouse-techdegree-projects.md)
  - [Java Design Patterns](https://github.com/adamelliotfields/gists/blob/master/2017/08/19/java-design-patterns.md)
