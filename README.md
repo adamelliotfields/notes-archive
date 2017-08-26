@@ -6,6 +6,7 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 ## 2017
 
 ### August
+ - [Java Functional Programming](https://github.com/adamelliotfields/gists/blob/master/2017/08/26/java-functional-programming.md)
  - [Java Annotations](https://github.com/adamelliotfields/gists/blob/master/2017/08/25/java-annotations.md)
  - [Unit Testing Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/25/unit-testing-notes.md)
  - [Gradle Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/24/gradle-notes.md)
