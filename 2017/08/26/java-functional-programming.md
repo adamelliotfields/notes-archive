@@ -28,6 +28,16 @@ Arrays
   .forEach(System.out::println);
 ```
 
+Microsoft has a chart on the C# docs comparing the key differences:
+
+| Characteristic     | Imperative                                                       | Functional                                                        |
+|--------------------|------------------------------------------------------------------|-------------------------------------------------------------------|
+| Programmer focus   | How to perform tasks (algorithms) and how to track state changes | What information is desired and what transformations are required |
+| State changes      | Important                                                        | Non-existent                                                      |
+| Order of execution | Important                                                        | Not important                                                     |
+| Control flow       | Loops, conditionals, and methods                                 | Functions and recursion                                           |
+| Primary unit       | Classes and instances                                            | Functions and data collections                                    |
+
 ### Pure Functions
 Given the same input, a pure function will always produce the same output. This is known as
 referential transparency.
@@ -37,18 +47,24 @@ Pure functions must not produce any side effects. This is known as idempotence.
 Pure functions can be cached. This is known as memoization.
 
 ### Higher Order Functions
+Functions can be passed both values and functions, and in the same way return either a value or a
+function. A function that accepts one or more functions as arguments and/or returns a function is a
+higher-order function.
 
 ### Functional Composition
+Composition is the act of combining simple functions to build more complicated ones. The result of
+each function if passed as the argument to the next.
 
-### Closures
+The Function interface has two instance methods - `andThen` and `compose` to facilitate functional
+composition.
 
-### Lazy Evaluation
+`x.andThen(y)` is equivalent to `y.compose(x)`.
 
 ### Lambdas
 A lambda expression represents an anonymous function. It is comprised of a set of parameters, the
 lambda operator (`->`), and a function body.
 
-When there is a single statement curly brackets are not mandatory and the return type of the
+When there is a single statement curly braces are not mandatory and the return type of the
 anonymous function is the same as that of the body expression.
 
 Read more [here](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
@@ -56,21 +72,20 @@ Read more [here](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpre
 ### Method Reference
 A method reference is the shorthand syntax for a lambda expression that executes just one method.
 
-### Function Interface
+There are four kinds of method references:
 
-### Iterable Interface
+| Kind                                                                        | Example                                |
+|-----------------------------------------------------------------------------|----------------------------------------|
+| Reference to a static method                                                | `ContainingClass::staticMethodName`    |
+| Reference to an instance method of a particular object                      | `containingObject::instanceMethodName` |
+| Reference to an instance method of an arbitrary object of a particular type | `ContainingType::methodName`           |
+| Reference to a constructor                                                  | `ClassName::new`                       |
 
-### Optionals
-An optional is a monad.
+### Functional Interface
+A functional interface is an interface that contains only one abstract method. A functional
+interface defines the target type of a lambda expression.
 
-### Consumer
-A function that accepts something, but returns nothing.
-
-### Supplier
-A function that accepts nothing, but returns something.
-
-### Predicate
-A function that accepts a parameter and returns a boolean.
+A functional interface is sometimes referred to as a Single Abstract Method (SAM) type.
 
 ### Stream
 A stream is a sequence of elements. In contrast, a list is a collection of elements. Streams carry
@@ -81,30 +96,14 @@ the Terminal Operation.
 
 Streams are lazy - they don't do anything until instructed.
 
-### Range
+### Optionals
+The Optional classes (`Optional`, `OptionalDouble`, `OptionalInt`, and `OptionalLong`) offer a way
+to handle situations in which a value may or may not be present.
 
-### `forEach`
-`forEach` is an instance method on any class that implements the `Iterable` interface.
+Optionals provide a better way to deal with potential null values and avoid `NullPointerException`s.
 
-`forEach` performs the given action for each element of the Iterable until all elements have been
-processed or the action throws an exception.
+An Optional can contain a value or be empty. Optionals provide methods to work with their values,
+and set a default value if no value is present.
 
-Read more [here](https://docs.oracle.com/javase/8/docs/technotes/guides/language/foreach.html).
-
-### `stream`
-
-### `filter`
-
-### `limit`
-
-### `collect`
-
-### `map`
-
-### `flatMap`
-
-### `reduce`
-
-### `distinct`
-
-### `sorted`
+You can call `isPresent()` to determine if a value is present and `get()` to obtain it. You should
+always call `isPresent` before calling `get` to avoid throwing a `NoSuchElementException`.
