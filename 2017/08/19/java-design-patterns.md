@@ -5,6 +5,7 @@ The Gang of Four refers to the authors of [Design Patterns: Elements of Reusable
 
 The book includes 23 design patterns, divided by type: Creational, Structural, and Behavioral.
 
+
 ## Creational Design Patterns
 Creational patterns are ones that create objects for you, rather than having you instantiate objects
 directly. This gives your program more flexibility in deciding which objects need to be created for
@@ -63,12 +64,15 @@ public class Audi extends Car {
 
 public class CarFactory {
   public static Car getCar(int year, String make, String model) {
-    if ("BMW".equalsIgnoreCase(make)) {
-      return new BMW(year, make, model);
-    } else if ("Audi".equalsIgnoreCase(make)) {
-      return new Audi(year, make, model);
-    } else {
-      return null
+    switch (make.toLowerCase()) {
+      case "BMW":
+        return new BMW(year, make, model);
+        break;
+      case "Audi":
+        return new Audi(year, make, model);
+        break;
+      case default:
+        return null;
     }
   }
 }
@@ -79,9 +83,53 @@ The Abstract Factory Pattern extends the Factory Pattern so that the if-else blo
 with factory classes for each sub class, and an abstract factory class that will return the sub
 class based on the input factory class.
 
+### Builder Pattern
+
+
 ## Structural Design Patterns
 These concern class and object composition. They use inheritance to compose interfaces and define
 ways to compose objects to obtain new functionality.
 
+### Decorator Pattern
+
+
 ## Behavioral Design Patterns
 Most of these design patterns are specifically concerned with communication between objects.
+
+### State Pattern
+
+### Dependency Injection Pattern
+Google Guice
+
+### Template Method Pattern
+Abstract classes
+
+### Observer Pattern
+RxJava
+
+## Architectural Design Patterns
+An architectural pattern is a general, reusable solution to a commonly occurring problem in software
+architecture within a given context.
+
+### Microservices Pattern
+
+### API Gateway Pattern
+
+
+## Concurrency Design Patterns
+Concurrency patterns are those types of design patterns that deal with the multi-threaded
+programming paradigm.
+
+### Promise Pattern
+Futures
+
+### Thread Pool Pattern
+
+
+## Presentational Design Patterns
+
+### Model View Controller Pattern
+
+### Model View View-Model Pattern
+
+### Flux Pattern
