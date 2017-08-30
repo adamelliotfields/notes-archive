@@ -6,6 +6,8 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 ## 2017
 
 ### August
+ - [Morphia Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/30/morphia-notes.md)
+ - [Java 8 Data and Time API](https://github.com/adamelliotfields/gists/blob/master/2017/08/30/java-date-time-api.md)
  - [Java Functional Programming](https://github.com/adamelliotfields/gists/blob/master/2017/08/26/java-functional-programming.md)
  - [Java Annotations](https://github.com/adamelliotfields/gists/blob/master/2017/08/25/java-annotations.md)
  - [Unit Testing Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/25/unit-testing-notes.md)
