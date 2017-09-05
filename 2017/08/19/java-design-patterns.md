@@ -84,7 +84,61 @@ with factory classes for each sub class, and an abstract factory class that will
 class based on the input factory class.
 
 ### Builder Pattern
+The Builder Pattern is useful when an constructor has many parameters or when an object only
+requires a couple default values to instantiate.
 
+```java
+public class Contact {
+  private String firstName;
+  private String lastName;
+  private String email;
+  private String phone;
+
+  // Constructor that takes a ContactBuilder object
+  public Contact(ContactBuilder contactBuilder) {
+    this.firstName = contactBuilder.firstName;
+    this.lastName = contactBuilder.lastName;
+    this.email = contactBuilder.email;
+    this.phone = contactBuilder.phone;
+  }
+
+  // Inner ContactBuilder class
+  public static class ContactBuilder {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phone;
+
+    // Constructor that requires first name and last name
+    public ContactBuilder(String firstName, String lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    // Return this to allow method chaining
+    public ContactBuilder withEmail(String email) {
+      this.email = email;
+      return this;
+    }
+
+    public ContactBuilder withPhone(String phone) {
+      this.phone = phone;
+      return this;
+    }
+
+    // Pass the ContactBuilder instance to the Contact constructor
+    public Contact build() {
+      return new Contact(this);
+    }
+  }
+}
+
+// Instantiating a contact object using the ContactBuilder
+Contact contact = new ContactBuilder("Adam", "Fields")
+                        .withEmail("adam@email.com")
+                        .withPhone("555-555-5555")
+                        .build();
+```
 
 ## Structural Design Patterns
 These concern class and object composition. They use inheritance to compose interfaces and define
@@ -99,7 +153,7 @@ Most of these design patterns are specifically concerned with communication betw
 ### State Pattern
 
 ### Dependency Injection Pattern
-Google Guice
+Spring, Google Guice
 
 ### Template Method Pattern
 Abstract classes
