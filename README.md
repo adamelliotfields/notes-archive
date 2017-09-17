@@ -6,6 +6,8 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 ## 2017
 
 ### September
+ - [Spring Reactive Web Client](https://github.com/adamelliotfields/gists/blob/master/2017/09/17/spring-reactive-web-client.md)
+ - [Spring Reactive Request and Response Interfaces](https://github.com/adamelliotfields/gists/blob/master/2017/09/17/spring-reactive-request-and-response-interfaces.md)
  - [Public APIs](https://github.com/adamelliotfields/gists/blob/master/2017/09/13/public-apis.md)
  - [Spring Boot Shell](https://github.com/adamelliotfields/gists/blob/master/2017/09/05/spring-boot-shell.md)
  - [Spring Boot Starters](https://github.com/adamelliotfields/gists/blob/master/2017/09/01/spring-boot-starters.md)
