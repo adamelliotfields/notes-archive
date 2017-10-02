@@ -5,6 +5,9 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 
 ## 2017
 
+### October
+ - [TypeScript Testing with React 16, Jest, and Enzyme 3](https://github.com/adamelliotfields/gists/blob/master/2017/10/02/typescript-testing-react-jest-enzyme.md)
+
 ### September
  - [Spring Documentation](https://github.com/adamelliotfields/gists/blob/master/2017/09/18/spring-documentation.md)
  - [Spring Reactive Web Client](https://github.com/adamelliotfields/gists/blob/master/2017/09/17/spring-reactive-web-client.md)
