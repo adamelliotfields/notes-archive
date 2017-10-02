@@ -52,7 +52,7 @@ You can download a working demo [here](https://github.com/adamelliotfields/react
 
 ```json
 {
-  "presets: ["react-latest"]
+  "presets": ["react-latest"]
 }
 ```
 
