@@ -32,6 +32,7 @@
  * Routing is now simpler thanks to React Router 4
  * Testing is simple thanks to Jest and Enzyme
  * `create-react-app` makes scaffolding a new app a breeze
+ * `react-hot-loader` simplifies implementing hot module replacement in development
  * TypeScript support using TSX is excellent
  * React 16 added increased rendering speed and enhanced error management
 
@@ -65,6 +66,7 @@
  * Enforces a more opinionated approach to application architecture than React
  * Routing and HTTP client are built-in
  * Migrating from Redux to NgRx Store is fairly straight forward
+ * Redux Dev Tools in Chrome can work with NgRX Store
  * Native app development using NativeScript
  * Styling is simple - either use global stylesheets or component-scope CSS
  * Animations use the Web Animations API (which will eventually be a standard)
