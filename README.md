@@ -6,6 +6,8 @@ I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfield
 ## 2017
 
 ### October
+ - [JavaScript Framework Comparison](https://github.com/adamelliotfields/gists/blob/master/2017/10/22/javascript-framework-comparison.md)
+ - [Angular Notes](https://github.com/adamelliotfields/gists/blob/master/2017/10/22/angular-notes.md)
  - [TypeScript Testing with React 16, Jest, and Enzyme 3](https://github.com/adamelliotfields/gists/blob/master/2017/10/02/typescript-testing-react-jest-enzyme.md)
 
 ### September
