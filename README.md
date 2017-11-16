@@ -1,9 +1,10 @@
 # Gists
-> All of my Gists.
-
-I've moved all of my Gists to a GitHub [repo](https://github.com/adamelliotfields/gists), which makes them easier to edit locally and much easier to sort.
+> Thoughts, notes, and snippets.
 
 ## 2017
+
+### November
+ - [Glitch Notes](https://github.com/adamelliotfields/gists/blob/master/2017/11/16/glitch-notes.md)
 
 ### October
  - [JavaScript Framework Comparison](https://github.com/adamelliotfields/gists/blob/master/2017/10/22/javascript-framework-comparison.md)
