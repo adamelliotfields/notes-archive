@@ -15,7 +15,7 @@ The following configuration will only run `npm install` if the `package.json` is
 
 The throttle property sets a delay for how long to wait before installing/restarting.
 
-*`watch.json`*
+**`watch.json`**
 
 ```json
 {
@@ -43,7 +43,7 @@ The throttle property sets a delay for how long to wait before installing/restar
 Every `package.json` must have an `engines` object and a `start` script. As you add dependencies,
 Glitch will install them.
 
-*`package.json`*
+**`package.json`**
 
 ```json
 {
@@ -79,7 +79,7 @@ Glitch will install them.
 Any environmental variables need to be stored in the `.env` file in the project root. Other users
 will be able to see the file, but not your values, so it can be used for keys, secrets, and tokens.
 
-*`.env`*
+**`.env`**
 
 ```
 PORT=3000
@@ -103,7 +103,7 @@ really doesn't matter since your app will be accessible to the web at port `80`.
 
 In order to use your API outside of the glitch.me domain, you'll need to enable CORS.
 
-*`index.js`*
+**`index.js`**
 
 ```javascript
 const Express = require('express');
