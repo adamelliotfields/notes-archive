@@ -4,6 +4,7 @@
 ## 2017
 
 ### November
+ - [Next.js Notes](https://github.com/adamelliotfields/gists/blob/master/2017/11/19/next-notes.md)
  - [Glitch Notes](https://github.com/adamelliotfields/gists/blob/master/2017/11/16/glitch-notes.md)
 
 ### October
