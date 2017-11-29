@@ -7,8 +7,8 @@ is an AWS EC2 instance running a custom Ubuntu distribution.
 
 ### Watch Configuration
 
-By default, Glitch will run `npm install` and `npm run start` everytime a file changes. You have limited
-control over this by modifying a `watch.json` file in the project root.
+By default, Glitch will run `npm install` and `npm run start` everytime a file changes. You have
+limited control over this by modifying a `watch.json` file in the project root.
 
 The following configuration will only run `npm install` if the `package.json` is changed; and
 `npm run start` if any `.js` or `.env` files change outside of the `build` folder.
