@@ -37,14 +37,8 @@
   * React 16 added increased rendering speed and enhanced error management
 
 **Cons:**
-  * Requires an advanced understanding of modern JavaScript (you need to already be a good JavaScript developer)
-    - no `for` loops
-    - no `if` statements
-    - no global variables
-  * Is a complete paradigm shift from classical DOM traversal and manipulation using jQuery
-  * Not a framework, so HTTP requests and Routing require additional libraries
-  * Requires compilation (Babel) and module bundling (Webpack)
-    - this is a pro for me, but seems to be an area of concern for a lot of people
+  * Is a complete paradigm shift from both jQuery and AngularJS, which can make it difficult to learn
+  * Only provides component lifecycle methods - everything else you're on your own
   * Unidirectional data flow means forms will be tricky when you're first starting out
   * More complex applications using Redux have an incredibly steep learning curve
   * There are way too many options for styling components (CSS-in-JS)
@@ -87,17 +81,14 @@ render(<App message='Hello World' />, document.getElementById('root'));
   * Styling is simple - either use global stylesheets or component-scope CSS
   * Animations use the Web Animations API (which will eventually be a standard)
     - requires a polyfill for older browsers
+  * Angular Material is an excellent UI component library
   * Angular 4.x focused on significant file size reduction over Angular 2.x
 
 **Cons:**
   * Overall, Angular has the steepest learning curve compared to React and Vue
   * Not everyone likes TypeScript
-  * Like React, you'll need to compile and bundle using TypeScript and Webpack
-    - you could use SystemJS if you absolutely had to
   * "Hello World" requires EIGHT dependencies
-  * NgRx has the same steep learning curve as Redux, except with fewer available tutorials
-  * Finding large-scale production web applications using Angular 4.x+ has proven difficult
-    - Angular remains the top choice for developing internal dashboards and portals, though
+
 
 **Hello World**
 
@@ -144,13 +135,11 @@ platformBrowserDynamic()
 
 **Pros:**
   * Almost as many stars as React on GitHub (and seems to be getting more stars at a faster rate)
+  * Everything just makes sense - there's not a lot of hackery needed to make things work
+  * Excellent API documentation
   * Directives are similar to AngularJS (1.x), which could make transitioning easier (e.g., `v-for`, `v-if`, `v-model`, etc)
   * Vuex seems more straight-forward than Redux
-  * Supposedly easier to learn than React (based on what I've read on Quora and Reddit)
-    - these opinions tend to come from the PHP/Laravel community
-    - I personally found React to be easier to learn and more enjoyable to write
   * Does not require a compiler or module bundler (you can just use a bunch of script tags)
-    - just because you can do something doesn't mean you should
   * First-class support for TypeScript (no need to install additional @types definitions)
   * TypeScript decorator pattern and class syntax is very similar to Angular
   * Excellent editor support in VS Code with the Vetur extension
@@ -163,9 +152,7 @@ platformBrowserDynamic()
   * Not backed by a large organization like Facebook or Google
     - financially backed by smaller companies like stdlib and deepstreamHub
     - honestly not a huge deal but worth mentioning when comparing to React and Angular
-  * Even harder to find large-scale production applications than Angular
   * Native mobile app development (Weex) is not as mature as React (React Native) or Angular (NativeScript)
-  * Between React and Angular (and Preact/Inferno/Riot/Aurelia/Ember), do we really need another library that does the same thing?
 
 **Hello World**
 
@@ -205,4 +192,58 @@ new Vue({
   template: '<App />',
   components: { App }
 });
+```
+
+
+### Aurelia
+
+**Pros:**
+  * Developed by Rob Eisenberg, who previously created Durandal
+  * Active community on GitHub, Stack Overflow, and Gitter
+  * Uses ES6 classes, property initializers, and decorators
+  * Works great with TypeScript
+  * Like Angular, it's easy to learn if you've used another object-oriented MVC framework
+    - seems to be very popular in the C# / ASP.NET community
+  * Includes routing, an HTTP client, animation, and internationalization
+  * Dependency injection couldn't be easier
+  * Provides simple databinding for any object (both one-way and two-way)
+  * Simple pub/sub with the Event Aggregator
+  * Extendable via plugins like `aurelia-auth`
+  * Works well with Web Components and Polymer
+  * Can use any UI library (like jQuery or React)
+    - this means you can also use libraries like Bootstrap or Kendo
+  * Dedicated Webpack plugin
+  * Very fast rendering benchmarks
+  * Excellent tutorials on the website
+
+**Cons:**
+  * There is a lot of documentation, but it felt hard to find what I was looking for
+  * There were a few gotchas with getting Webpack to work
+  * Editor support is not quite as robust as the other popular frameworks
+  * A dedicated file format like `.vue` would be nice to facilitate single-file components
+
+**Hello World**
+
+```javascript
+import { inlineView } from 'aurelia-framework';
+import { PLATFORM } from 'aurelia-pal';
+
+@inlineView(`
+  <template>
+    <h1>Hello World</h1>
+  </template>
+`)
+class App {}
+
+export async function configure (aurelia) {
+  aurelia.use.standardConfiguration();
+
+  if (process.env.NODE_ENV !== 'production') {
+    aurelia.use.developmentLogging();
+  }
+
+  await aurelia.start();
+
+  aurelia.setRoot(PLATFORM.moduleName(App));
+}
 ```
