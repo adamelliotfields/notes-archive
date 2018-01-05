@@ -1,8 +1,45 @@
-# Gists
+# Wiki
 > Thoughts, notes, and snippets.
+s
+The wiki associated with this repo is submodule. When first cloning the repo, the submodule will
+need to be initialized and updated.
+
+```
+$ git clone https://github.com/adamelliotfields/wiki.git
+
+$ git submodule init
+
+$ git submodule update
+```
+
+When making changes to the wiki (inside the `wiki/wiki` directory), make sure you are on the
+`master` branch and not a detached `HEAD`. Only changes to `master` will be visible on GitHub.
+
+After adding a file or updating an existing file, push your changes to the remote `master` branch,
+then `cd` to the parent repo and push the updated wiki folder to `master`.
+
+```
+$ cd wiki
+
+$ git checkout master
+
+$ git add .
+
+$ git commit
+
+$ git push origin master
+
+$ cd ..
+
+$ git add wiki
+
+$ git commit
+
+$ git push origin master
+```
 
 ## 2017
-
+s
 ### November
  - [JavaScript Sandboxes](https://github.com/adamelliotfields/gists/blob/master/2017/11/29/javascript-sandboxes.md)
  - [Next.js Notes](https://github.com/adamelliotfields/gists/blob/master/2017/11/19/next-notes.md)
