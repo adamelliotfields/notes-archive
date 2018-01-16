@@ -1,156 +1,139 @@
-# Wiki
-> Thoughts, notes, and snippets.
-s
-The wiki associated with this repo is submodule. When first cloning the repo, the submodule will
-need to be initialized and updated.
+# Notes
+> My repository for notes and ideas written in Markdown.
 
-```
-$ git clone https://github.com/adamelliotfields/wiki.git
+I use Git to keep track of my notes instead of a dedicated cloud-based note-taking app. Using Git
+gives me access to a simple Version Control System that is built into every text editor I use.
+GitHub automatically renders the Markdown to HTML and applies the appropriate syntax highlighting
+for code snippets.
 
-$ git submodule init
+I'm using VS Code, and I find the Git History, Git Lens, and Markdown Shortcuts extensions to be
+helpful. To preview notes, I use my own custom Sass [theme](https://github.com/adamelliotfields/vscode-github-markdown-css).
 
-$ git submodule update
-```
+Notes are sorted by topic, and filenames are prefixed with the date in `YYYY-MM-DD` format.
 
-When making changes to the wiki (inside the `wiki/wiki` directory), make sure you are on the
-`master` branch and not a detached `HEAD`. Only changes to `master` will be visible on GitHub.
+Some of these notes are incomplete, and some may be outdated, so apologies if you stumbled upon this
+repository and didn't find the solution you were looking for. If something is incorrect or you have
+a question, please by all means open an [issue](https://github.com/adamelliotfields/notes/issues)!
 
-After adding a file or updating an existing file, push your changes to the remote `master` branch,
-then `cd` to the parent repo and push the updated wiki folder to `master`.
+## Topics
 
-```
-$ cd wiki
+### JavaScript
+  - [JavaScript Sandbox Comparison](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-11-29-javascript-sandbox-comparison.md)
+  - [NextJS Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-11-19-nextjs-notes.md)
+  - [JavaScript Framework Comparison](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-10-22-javascript-framework-comparison.md)
+  - [Angular Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-10-22-angular-notes.md)
+  - [TypeScript Testing with React, Jest, and Enzyme](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-10-02-typescript-testing-with-react-jest-enzyme.md)
+  - [Babel Preset Plugins](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-08-07-babel-preset-plugins.md)
+  - [React Redux Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-08-07-react-redux-notes.md)
+  - [Webpack 3 Code Splitting using Dynamic Imports and React Router](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-07-17-webpack-3-code-splitting-using-dynamic-imports-and-react-router.md)
+  - [How to Symlink NVM Node Binaries](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-07-15-how-to-symlink-nvm-node-binaries.md)
+  - [NPM Peer Dependencies with JQ](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-07-15-npm-peer-dependencies-with-jq.md)
+  - [Promise Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-07-13-promise-notes.md)
+  - [Webpack Plugins](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-06-20-webpack-plugins.md)
+  - [ImmutableJS Cheatsheet](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-06-12-immutablejs-cheatsheet.md)
+  - [Using Styled Componented with Rollup](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-06-01-using-styled-components-with-rollup.md)
+  - [Gulp Browserify ES2015 Sourcemaps](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-27-gulp-browserify-es2015-sourcemaps.md)
+  - [React Scaffolding](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-26-react-scaffolding.md)
+  - [Express Scaffolding](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-26-express-scaffolding.md)
+  - [Angular Scaffolding](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-26-angular-scaffolding.md)
+  - [Tern Configuration](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-22-tern-configuration.md)
+  - [Camo Example](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-19-camo-example.md)
+  - [Koa Middleware](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-05-12-koa-middleware.md)
+  - [NPM Packages](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-04-30-npm-packages.md)
+  - [ESLint Configuration](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-04-22-eslint-configuration.md)
+  - [JavaScript Framework Screencasts](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-03-24-javascript-framework-screencasts.md)
+  - [NPM Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-03-15-npm-notes.md)
+  - [NodeJS API Reference](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-03-14-nodejs-api-reference.md)
+  - [Codecademy JavaScript Glossary](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-03-04-codecademy-javascript-glossary.md)
+  - [React Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-02-26-react-notes.md)
+  - [ES2015 Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-02-25-es2015-notes.md)
+  - [AJAX Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-02-24-ajax-notes.md)
+  - [JavaScript Web API Reference](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-02-22-javascript-web-api-reference.md)
+  - [jQuery Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-02-10-jquery-notes.md)
+  - [JavaScript Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-02-10-javascript-notes.md)
 
-$ git checkout master
+### CSS
+  - [Bootstrap 4 JavaScript Components]()
+  - [Bootstrap 4 Themes under $20]()
+  - [CSS Frameworks and React Component Libraries]()
+  - [Stylelint Configuration]()
+  - [PostCSS Plugins]()
+  - [Codecademy CSS3 Features]()
+  - [Codecademy CSS Glossary]()
+  - [Sass Notes]()
 
-$ git add .
+### HTML
+  - [Codecademy HTML5 Features]()
+  - [Codecademy HTML Glossary]()
 
-$ git commit
+### Java
+  - [Spring Documentation]()
+  - [Spring Reactive Web Client]()
+  - [Spring Reactive Request and Response Interfaces]()
+  - [Spring Boot Shell]()
+  - [Spring Boot Starters]()
+  - [Morphia Notes]()
+  - [Java 8 Date and Time API]()
+  - [Java Functional Programming]()
+  - [Java Annotations]()
+  - [Gradle Notes]()
+  - [Maven Notes]()
+  - [Java Design Patterns]()
+  - [Java Collections]()
+  - [Java Notes]()
 
-$ git push origin master
+### SQL
+  - [Treehouse SQL Reference]()
+  - [PostgreSQL Notes]()
+  - [Codecademy SQL Glossary]()
+  - [SQL Databases]()
+  - [SQL Notes]()
 
-$ cd ..
+### MongoDB
+  - [Importing a CSV into MongoDB]()
 
-$ git add wiki
+### Linux
+  - [Command Line Guide]()
+  - [Cloud9 Initial Setup]()
+  - [Codecademy Command Line Glossary]()
 
-$ git commit
+### macOS
+  - [macOS JavaScript Development Environment]()
+  - [Homebrew Notes]()
 
-$ git push origin master
-```
+### Windows
+  - [How to Add Micro to Windows Shell Context Menu]()
+  - [Freenode mIRC SASL Setup]()
+  - [Node Gyp with Visual Studio 2017 on Windows]()
+  - [Windows JavaScript Development Environment]()
 
-## 2017
-s
-### November
- - [JavaScript Sandboxes](https://github.com/adamelliotfields/gists/blob/master/2017/11/29/javascript-sandboxes.md)
- - [Next.js Notes](https://github.com/adamelliotfields/gists/blob/master/2017/11/19/next-notes.md)
- - [Glitch Notes](https://github.com/adamelliotfields/gists/blob/master/2017/11/16/glitch-notes.md)
+### Git
+  - [Using GitHub on Coda iOS]()
+  - [How to Track GitHub Releases]()
+  - [Git Configuration]()
 
-### October
- - [JavaScript Framework Comparison](https://github.com/adamelliotfields/gists/blob/master/2017/10/22/javascript-framework-comparison.md)
- - [Angular Notes](https://github.com/adamelliotfields/gists/blob/master/2017/10/22/angular-notes.md)
- - [TypeScript Testing with React 16, Jest, and Enzyme 3](https://github.com/adamelliotfields/gists/blob/master/2017/10/02/typescript-testing-react-jest-enzyme.md)
+### PHP
+  - [PHP Reference]()
+  - [PHP Notes]()
 
-### September
- - [Spring Documentation](https://github.com/adamelliotfields/gists/blob/master/2017/09/18/spring-documentation.md)
- - [Spring Reactive Web Client](https://github.com/adamelliotfields/gists/blob/master/2017/09/17/spring-reactive-web-client.md)
- - [Spring Reactive Request and Response Interfaces](https://github.com/adamelliotfields/gists/blob/master/2017/09/17/spring-reactive-request-response-interfaces.md)
- - [Public APIs](https://github.com/adamelliotfields/gists/blob/master/2017/09/13/public-apis.md)
- - [Spring Boot Shell](https://github.com/adamelliotfields/gists/blob/master/2017/09/05/spring-boot-shell.md)
- - [Spring Boot Starters](https://github.com/adamelliotfields/gists/blob/master/2017/09/01/spring-boot-starters.md)
+### Python
+  - [Codecademy Python Glossary]()
+  - [Python Notes]()
 
-### August
- - [Morphia Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/30/morphia-notes.md)
- - [Java 8 Data and Time API](https://github.com/adamelliotfields/gists/blob/master/2017/08/30/java-date-time-api.md)
- - [Java Functional Programming](https://github.com/adamelliotfields/gists/blob/master/2017/08/26/java-functional-programming.md)
- - [Java Annotations](https://github.com/adamelliotfields/gists/blob/master/2017/08/25/java-annotations.md)
- - [Unit Testing Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/25/unit-testing-notes.md)
- - [Gradle Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/24/gradle-notes.md)
- - [Maven Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/22/maven-notes.md)
- - [Treehouse Techdegree Projects](https://github.com/adamelliotfields/gists/blob/master/2017/08/21/treehouse-techdegree-projects.md)
- - [Java Design Patterns](https://github.com/adamelliotfields/gists/blob/master/2017/08/19/java-design-patterns.md)
- - [Java Collections](https://github.com/adamelliotfields/gists/blob/master/2017/08/19/java-collections.md)
- - [Java Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/14/java-notes.md)
- - [Babel Preset Plugins](https://github.com/adamelliotfields/gists/blob/master/2017/08/07/babel-preset-plugins.md)
- - [React Redux Notes](https://github.com/adamelliotfields/gists/blob/master/2017/08/07/react-redux-notes.md)
-
-### July
- - [Webpack 3 Code Splitting using Dynamic Imports and React Router](https://github.com/adamelliotfields/gists/blob/master/2017/07/17/webpack-3-code-splitting.md)
- - [Using NVM with Webstorm](https://github.com/adamelliotfields/gists/blob/master/2017/07/15/nvm-webstorm.md)
- - [Install/Uninstall NPM Peer Dependencies with JQ](https://github.com/adamelliotfields/gists/blob/master/2017/07/15/npm-peer-dependencies-jq.md)
- - [Promises](https://github.com/adamelliotfields/gists/blob/master/2017/07/13/promises.md)
- - [GitHub on Coda iOS](https://github.com/adamelliotfields/gists/blob/master/2017/07/12/github-coda-ios.md)
- - [Bootstrap 4 JavaScript Components](https://github.com/adamelliotfields/gists/blob/master/2017/07/04/bootstrap-4-javascript-components.md)
-
-### June
- - [Bootstrap 4 Themes Under $20](https://github.com/adamelliotfields/gists/blob/master/2017/06/28/bootstrap-4-themes-under-20.md)
- - [App Ideas](https://github.com/adamelliotfields/gists/blob/master/2017/06/28/app-ideas.md)
- - [Google Cloud SDK Commands](https://github.com/adamelliotfields/gists/blob/master/2017/06/27/google-cloud-sdk-commands.md)
- - [Cloud Platform Comparison](https://github.com/adamelliotfields/gists/blob/master/2017/06/25/cloud-platform-comparison.md)
- - [Add Micro to Windows Shell Context Menu](https://github.com/adamelliotfields/gists/blob/master/2017/06/24/micro-windows-shell-context-menu.md)
- - [Freenode mIRC SASL Setup](https://github.com/adamelliotfields/gists/blob/master/2017/06/24/freenode-mirc-sasl-setup.md)
- - [Node Gyp with Visual Studio 2017 on Windows](https://github.com/adamelliotfields/gists/blob/master/2017/06/22/node-gyp-visual-studio-2017-windows.md)
- - [Webpack Plugins](https://github.com/adamelliotfields/gists/blob/master/2017/06/20/webpack-plugins.md)
- - [CSS Frameworks and React Component Libraries](https://github.com/adamelliotfields/gists/blob/master/2017/06/14/css-frameworks-react-component-libraries.md)
- - [Immutable.js Cheatsheet](https://github.com/adamelliotfields/gists/blob/master/2017/06/12/immutable-js-cheatsheet.md)
- - [How to Track GitHub Releases](https://github.com/adamelliotfields/gists/blob/master/2017/06/10/track-github-releases.md)
- - [Using Styled Components with Rollup](https://github.com/adamelliotfields/gists/blob/master/2017/06/01/styled-components-rollup.md)
-
-### May
- - [Gulp Browserify ES2015 Sourcemaps](https://github.com/adamelliotfields/gists/blob/master/2017/05/27/gulp-browserify-es2015-sourcemaps.md)
- - [React Scaffolding](https://github.com/adamelliotfields/gists/blob/master/2017/05/26/react-scaffolding.md)
- - [Express Scaffolding](https://github.com/adamelliotfields/gists/blob/master/2017/05/26/express-scaffolding.md)
- - [Angular Scaffolding](https://github.com/adamelliotfields/gists/blob/master/2017/05/26/angular-scaffolding.md)
- - [Command Line Guide](https://github.com/adamelliotfields/gists/blob/master/2017/05/23/command-line-guide.md)
- - [Tern Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/05/22/tern-configuration.md)
- - [Sublime Text Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/05/22/sublime-text-configuration.md)
- - [Stylelint Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/05/22/stylelint-configuration.md)
- - [Camo Example](https://github.com/adamelliotfields/gists/blob/master/2017/05/19/camo-example.md)
- - [Koa Middleware](https://github.com/adamelliotfields/gists/blob/master/2017/05/12/koa-middleware.md)
- - [PostCSS Plugins](https://github.com/adamelliotfields/gists/blob/master/2017/05/09/postcss-plugins.md)
- - [Chrome Extensions](https://github.com/adamelliotfields/gists/blob/master/2017/05/04/chrome-extensions.md)
- - [VS Code Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/05/01/vs-code-configuration.md)
- - [macOS JavaScript Development Environment](https://github.com/adamelliotfields/gists/blob/master/2017/05/01/mac-os-javascript-development-environment.md)
- - [Git Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/05/01/git-configuration.md)
-
-### April
- - [NPM Packages](https://github.com/adamelliotfields/gists/blob/master/2017/04/30/npm-packages.md)
- - [Atom Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/04/28/atom-configuration.md)
- - [Cloud9 Initial Setup](https://github.com/adamelliotfields/gists/blob/master/2017/04/27/cloud9-initial-setup.md)
- - [Windows JavaScript Development Environment](https://github.com/adamelliotfields/gists/blob/master/2017/04/22/windows-javascript-development-environment.md)
- - [ESLint Configuration](https://github.com/adamelliotfields/gists/blob/master/2017/04/22/eslint-configuration.md)
-
-### March
- - [JavaScript Framework Screencasts](https://github.com/adamelliotfields/gists/blob/master/2017/03/24/javascript-framework-screencasts.md)
- - [Importing a CSV into MongoDB](https://github.com/adamelliotfields/gists/blob/master/2017/03/19/importing-csv-mongodb.md)
- - [Treehouse SQL Reference](https://github.com/adamelliotfields/gists/blob/master/2017/03/18/treehouse-sql-reference.md)
- - [CRUD](https://github.com/adamelliotfields/gists/blob/master/2017/03/18/crud.md)
- - [NPM](https://github.com/adamelliotfields/gists/blob/master/2017/03/15/npm.md)
- - [PostgreSQL](https://github.com/adamelliotfields/gists/blob/master/2017/03/15/postgresql.md)
- - [Node.js API Reference](https://github.com/adamelliotfields/gists/blob/master/2017/03/14/node-api-reference.md)
- - [Progressive Web Applications](https://github.com/adamelliotfields/gists/blob/master/2017/03/09/progressive-web-applications.md)
- - [REST APIs](https://github.com/adamelliotfields/gists/blob/master/2017/03/09/rest-apis.md)
- - [HTTP](https://github.com/adamelliotfields/gists/blob/master/2017/03/09/http.md)
- - [Codecademy CSS3 Features](https://github.com/adamelliotfields/gists/blob/master/2017/03/05/codecademy-css3-features.md)
- - [Codecademy HTML5 Features](https://github.com/adamelliotfields/gists/blob/master/2017/03/05/codecademy-html5-features.md)
- - [Codecademy CSS Glossary](https://github.com/adamelliotfields/gists/blob/master/2017/03/05/codecademy-css-glossary.md)
- - [Codecademy HTML Glossary](https://github.com/adamelliotfields/gists/blob/master/2017/03/05/codecademy-html-glossary.md)
- - [Codecademy Python Glossary](https://github.com/adamelliotfields/gists/blob/master/2017/03/05/codecademy-python-glossary.md)
- - [Codecademy JavaScript Glossary](https://github.com/adamelliotfields/gists/blob/master/2017/03/04/codecademy-javascript-glossary.md)
- - [Codecademy SQL Commands](https://github.com/adamelliotfields/gists/blob/master/2017/03/04/codecademy-sql-commands.md)
- - [SQL Databases](https://github.com/adamelliotfields/gists/blob/master/2017/03/04/sql-databases.md)
- - [SQL Notes](https://github.com/adamelliotfields/gists/blob/master/2017/03/04/sql-notes.md)
-
-### February
- - [PHP Reference](https://github.com/adamelliotfields/gists/blob/master/2017/02/27/php-reference.md)
- - [React Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/26/react-notes.md)
- - [ES2015 Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/25/es2015-notes.md)
- - [AJAX Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/24/ajax-notes.md)
- - [JavaScript Web API Reference](https://github.com/adamelliotfields/gists/blob/master/2017/02/22/javascript-web-api-reference.md)
- - [Sass](https://github.com/adamelliotfields/gists/blob/master/2017/02/16/sass.md)
- - [Homebrew](https://github.com/adamelliotfields/gists/blob/master/2017/02/13/homebrew.md)
- - [Codecademy Command Line Commands](https://github.com/adamelliotfields/gists/blob/master/2017/02/12/codecademy-command-line-commands.md)
- - [jQuery Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/10/jquery-notes.md)
- - [JavaScript Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/10/jquery-notes.md)
- - [Python Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/07/python-notes.md)
- - [PHP Notes](https://github.com/adamelliotfields/gists/blob/master/2017/02/07/php-notes.md)
- - [Programming Paradigms](https://github.com/adamelliotfields/gists/blob/master/2017/02/07/programming-paradigms.md)
+### Miscellaneous
+  - [Glitch Notes]()
+  - [Public APIs]()
+  - [Unit Testing Notes]()
+  - [Treehouse Techdegree Projects]()
+  - [App Ideas]()
+  - [Google Cloud SDK Commands]()
+  - [Cloud Platform Comparison]()
+  - [Sublime Text Configuration]()
+  - [Chrome Extensions]()
+  - [VS Code Configuration]()
+  - [Atom Configuration]()
+  - [CRUD Notes]()
+  - [Progressive Web Applications]()
+  - [REST API Notes]()
+  - [HTTP Notes]()
+  - [Programming Paradigms]()
