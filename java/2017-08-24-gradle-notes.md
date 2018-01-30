@@ -1,4 +1,6 @@
 # Gradle Notes
+:calendar: *August 24, 2017*
+
 Gradle is an open source build automation system that uses a Groovy-based DSL instead of XML for
 declaring project configuration.
 

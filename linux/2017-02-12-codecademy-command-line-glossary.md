@@ -1,4 +1,5 @@
 # Codecademy Command Line Glossary
+> :calendar: *February 12, 2017*
 
 The command line is a text interface for your computer. It's a program that takes in commands, which it passes on to the computer's operating system to run.
 

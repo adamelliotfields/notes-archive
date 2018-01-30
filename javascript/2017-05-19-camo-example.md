@@ -1,4 +1,5 @@
 # Camo Example
+> :calendar: *May 19, 2017*
 
 ### MongoDB
 

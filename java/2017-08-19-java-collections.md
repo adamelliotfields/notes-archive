@@ -1,4 +1,6 @@
 # Java Collections
+> :calendar: *August 19, 2017*
+
 A collection is simply an object that groups multiple elements into a single unit. Collections are
 used to store, retrieve, manipulate, and communicate aggregate data.
 

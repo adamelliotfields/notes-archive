@@ -1,4 +1,6 @@
 # VS Code Configuration
+> :calendar: *May 1, 2017*
+
 I recommend VS Code if you're looking for an editor that doesn't require hours of reading docs to get set up; or downloading dozens of plugins to get the functionality you want. VS Code's integrated autocompletion also *just works* out of the box. It also works really well on Windows, with a great integrated terminal (that can be configured to use CMD, PowerShell, or Bash).  
 
 On Windows, I recommend installing VS Code outside of Chocolatey, so VS Code can manage its own autoupdating.  

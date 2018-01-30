@@ -1,4 +1,6 @@
 # Babel Preset Plugins
+> :calendar: *August 7, 2017*
+
 This is a list of all the plugins included with various Babel presets.
 
 Using the presets is super convenient, but if you don't need to target browsers that don't support ES6 (like IE, or 2 year old versions of Chrome), you're compiling more than you need to and also significantly bloating your code. For example, a single React class component with an async/await `axios` request and a for...of loop went from 30 lines of code to 110 when using all of the presets (not to mention adding unnecessary polyfills).

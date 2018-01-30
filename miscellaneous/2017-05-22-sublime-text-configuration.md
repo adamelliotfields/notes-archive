@@ -1,4 +1,6 @@
 # Sublime Text Configuration
+> :calendar: *May 22, 2017*
+
 Sublime Text is a powerful text editor that can be extended with a robust ecosystem of packages. I'm also following the progress of [Lime](https://github.com/limetext/lime), which is an open source port of Sublime written in Go.
 
 ### Install Package Control

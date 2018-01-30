@@ -1,4 +1,6 @@
 # Command Line Guide
+> :calendar: *May 23, 2017*
+
 Being able to use a command line interface is a must-have skill for any JavaScript developer. You'll need to download dependencies from NPM, run a web server, database server, task runner, compilers, and push changes to a repository. There are also a ton of really cool CLI programs available on NPM to download, and creating your own CLI apps is super fun too.  
 
 Just about everything you need to do can be done from the stock command line interfaces on macOS (Terminal) and Windows (Command Prompt, PowerShell, WSL). With that said, you can customize your environment to make your command line experience more enjoyable and productive.  

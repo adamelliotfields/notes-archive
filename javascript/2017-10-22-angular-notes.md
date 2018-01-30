@@ -1,5 +1,5 @@
 # Angular Notes
-
+> :calendar: *October 22, 2017*
 
 ### AngularJS vs Angular
 

@@ -1,4 +1,5 @@
 # Java Functional Programming
+:calendar: *August 26, 2017*
 
 ### Imperative vs Declarative
 With Imperative Programming, your code explains step-by-step what you want to happen:

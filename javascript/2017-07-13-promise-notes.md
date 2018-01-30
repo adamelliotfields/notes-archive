@@ -1,4 +1,5 @@
 # Promise Notes
+> :calendar: *July 13, 2017*
 
 ```javascript
 // Create a new promise using the Promise constructor

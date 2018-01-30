@@ -1,4 +1,6 @@
 # ESLint Configuration
+> :calendar: *April 22, 2017*
+
 These are my global ESLint settings, using [semistandard](https://github.com/Flet/semistandard) with global support for jQuery. This is useful to have for general JavaScript web/Node development. For working with specific technologies like AngularJS, React, Mocha/Jest, etc, you should set up a local, project-specific configuration.  
 
 ESLint takes a global/global or local/local approach. This means if you don't have a local ESLint in your project, it will look for a global install and use the globally installed plugins/configs. If you have a local installation (in your project), it will conversely look for locally installed plugins/configs.  

@@ -1,4 +1,5 @@
 # Python Notes
+> :calendar: *February 7, 2017*
 
 ### Indentation
  - In Python, there are no curly braces to signify a code block.

@@ -1,5 +1,7 @@
 # Java 8 Date and Time API
-> [`java.time.*`](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)
+> :calendar: *August 30, 2017*
+
+*[`java.time.*`](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)*
 
 ### Class [`DateTimeFormatter`](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)
 The primary class for formatting dates and times. The class contains 15 static constant fields which

@@ -1,4 +1,6 @@
 # GitHub on Coda iOS
+> :calendar: *July 12, 2017*
+
 Coda on iOS is a great little text editor, but it lacks GitHub integration. I've found two approaches to getting it to work.
 
 ### The GUI Way

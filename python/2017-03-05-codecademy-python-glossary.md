@@ -1,4 +1,5 @@
 # Codecademy Python Glossary
+> :calendar: *March 5, 2017*
 
 ### Class
 Python is an Language that supports the Object Oriented Programming paradigm. Like other OOP languages, Python has classes which are defined wireframes of objects. Python supports class inheritance. A class may have many subclasses but may only inherit directly from one superclass.

@@ -1,4 +1,5 @@
 # Programming Paradigms
+> :calendar: *February 7, 2017*
 
 ### Imperative
  - Control flow is an explicit sequence of commands.

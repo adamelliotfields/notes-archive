@@ -1,4 +1,6 @@
 # HTTP Notes
+> :calendar: *March 9, 2017*
+
 HTTP stands for HyperText Transfer Protocol and represents a format of communication between two devices over the internet.
 
 The internet consists of a vast array of highly-connected devices spanning the entire globe. To ensure that any two devices can communicate, it was necessary to develop a common set of rules - or protocol - to facilitate dependable communication.

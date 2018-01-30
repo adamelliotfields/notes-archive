@@ -1,4 +1,5 @@
 # TypeScript Testing with React, Jest, and Enzyme
+> :calendar: *October 2, 2017*
 
 These are the steps required to start using the latest versions of React and Enzyme. Note that I'm
 using Babel in addition to TypeScript using `awesome-typescript-loader` in Webpack. If you're not

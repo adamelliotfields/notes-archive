@@ -1,5 +1,7 @@
 # Glitch Notes
-> Notes on using Glitch.me
+> :calendar: *November 16, 2017*
+
+Notes on using [Glitch.me](https://glitch.com).
 
 Glitch is a code sandbox/playground for both client-side and server-side code. Each Glitch project
 is an AWS EC2 instance running a custom Ubuntu distribution.

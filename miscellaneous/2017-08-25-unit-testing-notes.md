@@ -1,7 +1,9 @@
 # Unit Testing Notes
-> "Whenever you are tempted to type something into a print statement or a debugger expression, write it as a test instead." - Martin Fowler
+> :calendar: *August 25, 2017*
 
-> "Test until fear leads to boredom." - [JUnit](http://junit.org/junit4/faq.html#atests_5)
+*"Whenever you are tempted to type something into a print statement or a debugger expression, write it as a test instead."* - Martin Fowler
+
+*"Test until fear leads to boredom."* - [JUnit](http://junit.org/junit4/faq.html#atests_5)
 
 ### AAA
  - **Arrange** - The initial test setup. Instantiate a class, assign variables, and/or create mocks.

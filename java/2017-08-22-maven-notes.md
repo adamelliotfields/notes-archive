@@ -1,4 +1,5 @@
 # Maven Notes
+:calendar: *August 22, 2017*
 
 ### Archetype
 A Maven archetype is a project templating toolkit. There are many community archetypes as well as a

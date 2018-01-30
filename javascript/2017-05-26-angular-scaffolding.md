@@ -1,4 +1,6 @@
 # Angular Scaffolding
+> :calendar: *May 26, 2017*
+
 These are the resulting folder structures when using the three most popular AngularJS scaffolding tools: [MEAN.io](https://github.com/linnovate/mean), [MEAN.js](https://github.com/meanjs/mean), and [Yeoman Angular Fullstack](https://github.com/angular-fullstack/generator-angular-fullstack).  
 
 ### MEAN.io

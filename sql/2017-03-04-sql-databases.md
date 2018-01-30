@@ -1,4 +1,5 @@
 # SQL Databases
+> :calendar: *March 4, 2017*
 
 ### SQLite
 SQLite is a popular open source SQL database. It is able to store an entire database in a single file. One of the biggest advantages this provides is that all of the data can be stored locally without having to connect your database to a server.

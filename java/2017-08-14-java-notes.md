@@ -1,4 +1,5 @@
 # Java Notes
+> :calendar: *August 14, 2017*
 
 ### Whitespace
 Java ignores whitespace. The Google style guide recommends block indentation of 2 spaces, and indent

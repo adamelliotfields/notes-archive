@@ -1,4 +1,6 @@
 # Express Scaffolding
+> :calendar: *May 26, 2017*
+
 This is the resulting folder structure when using the Express Generator.
 
 ```

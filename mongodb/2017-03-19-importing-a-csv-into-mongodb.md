@@ -1,4 +1,5 @@
 # Importing a CSV into MongoDB
+> :calendar: *March 19, 2017*
 
 ```bash
 mongoimport -db db -c collection --type csv --file file.csv --headerline

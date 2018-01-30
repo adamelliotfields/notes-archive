@@ -1,4 +1,6 @@
 # Tern Configuration
+> :calendar: *May 22, 2017*
+
 [Tern](http://ternjs.net/) is a JavaScript code analysis and autocompletion engine that is editor agnostic.  
 
 ### Install Tern
