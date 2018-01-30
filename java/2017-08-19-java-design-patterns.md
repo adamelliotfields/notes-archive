@@ -1,4 +1,5 @@
 # Java Design Patterns
+:calendar: *August 19, 2017*
 
 ### Gang of Four
 The Gang of Four refers to the authors of [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8/).

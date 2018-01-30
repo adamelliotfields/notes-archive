@@ -1,4 +1,5 @@
 # SQL Commands
+> :calendar: *March 4, 2017*
 
 `ALTER TABLE` lets you add columns to a table in a database.
 

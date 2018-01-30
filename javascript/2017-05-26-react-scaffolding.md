@@ -1,4 +1,6 @@
 # React Scaffolding
+> :calendar: *May 26, 2017*
+
 These are the resulting folder structures when using [Create React App](https://github.com/facebookincubator/create-react-app), [React Starter Kit](https://github.com/kriasoft/react-starter-kit), and [MERN.io](https://github.com/Hashnode/mern-starter).  
 
 ### Create React App

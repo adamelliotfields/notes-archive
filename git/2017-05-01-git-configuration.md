@@ -1,4 +1,6 @@
 # Git Configuration
+> :calendar: *May 1, 2017*
+
 Your global `.gitconfig` file should be placed in your home directory (`/Users/<username>` on macOS or `C:\Users\<username>` on Windows). You can also have a `.gitconfig` per project, as well as a `.gitattributes` file, but I prefer to just use global settings.  
 
 ### Line Endings

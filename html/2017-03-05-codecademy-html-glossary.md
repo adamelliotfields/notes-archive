@@ -1,4 +1,6 @@
 ### Codecademy HTML Glossary
+> :calendar: *March 5, 2017*
+
 HTML stands for Hyper Text Markup Language. It is the language used to create all websites.
 
 *Read more:*

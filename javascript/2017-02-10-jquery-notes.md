@@ -1,4 +1,6 @@
 #jQuery Notes
+> :calendar: *February 10, 2017*
+
 jQuery is a library, or set of helpful add-ons, to the JavaScript programming language. jQuery allows JavaScript developers to "write less, do more".
 
 ### What is jQuery?

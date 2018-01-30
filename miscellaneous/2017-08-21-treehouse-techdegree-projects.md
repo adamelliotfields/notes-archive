@@ -1,4 +1,6 @@
 # Treehouse Techdegree Projects
+> :calendar: *August 21, 2017*
+
 <a name="toc"></a>
  - [Front End Web Development](#front-end-web)
  - [Full Stack JavaScript Development](#full-stack-js)

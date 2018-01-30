@@ -1,4 +1,6 @@
 # NPM Peer Dependencies with JQ
+> :calendar: *July 15, 2017*
+
 [jq](https://github.com/stedolan/jq) is a command line utility for parsing JSON. You can use it read the `peerDependencies` field in a `package.json` (or any field), and pipe that output to `npm install`.
 
 These are contrived examples; there are npm packages like `npm-install-peers` or `install-peerdeps` that can do this for you (although neither work for global installs).

@@ -1,4 +1,6 @@
 # Freenode mIRC SASL Setup
+> :calendar: *June 24, 2017*
+
 I had been using Textual on macOS which has SASL built-in. On Windows, mIRC requires a tiny bit of configuration.  
 
 ### Nickserv Registration

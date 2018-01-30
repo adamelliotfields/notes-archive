@@ -1,4 +1,6 @@
 ## Webpack 3 Code Splitting using Dynamic Imports and React Router
+> :calendar: *July 17, 2017*
+
 This is a simple example adapted from Hassan Ali's [post](https://hackernoon.com/code-splitting-for-react-router-with-webpack-and-hmr-bb509968e86f) on Hacker Noon.
 
 This example uses `async/await` which requires using [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) as well as the [transform-async-to-generator](https://babeljs.io/docs/plugins/transform-async-to-generator) Babel plugin. Note that this plugin is included in the Stage 3 preset; so if you're using that (or Stage 0, 1, or 2) you'll be all set.

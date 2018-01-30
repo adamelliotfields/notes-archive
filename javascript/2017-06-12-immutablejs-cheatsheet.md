@@ -1,4 +1,6 @@
 # ImmutableJS Cheatsheet
+> :calendar: *June 12, 2017*
+
 This is a running list of Immutable.js snippets and tips that I've used (and will probably use again).
 
 ### Update an item in a Collection

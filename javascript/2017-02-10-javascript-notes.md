@@ -1,4 +1,5 @@
 # JavaScript Notes
+> :calendar: *February 10, 2017*
 
 ### What can we use JavaScript for?
  - Make websites respond to user interaction.

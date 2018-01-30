@@ -1,4 +1,5 @@
 ## Using Styled Components with Rollup
+> :calendar: *June 1, 2017*
 
 I was playing around with Styled Components and so far think it is the easiest way to individually-style your React components. Styled Components uses ES2015's [tagged template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals) so you can pass a multiline string full of plain CSS rules to the `styled` factory function like so:
 

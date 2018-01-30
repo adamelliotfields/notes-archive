@@ -1,4 +1,6 @@
 # Sass Notes
+> :calendar: *February 16, 2017*
+
 Sass (Syntactically Awesome Style Sheets) is a style sheet language and CSS preprocessor. Sass can be written in the original syntax (the indented syntax) or the newer SCSS (Sassy CSS) syntax. Sass extends CSS by providing mechanisms available to more traditional programming languages like variables, conditionals, loops, and objects; plus mixins, extends, and placeholders.
 
 Sass can be compiled into CSS at runtime, or `watch`ed to translate into CSS whenever the Sass file is saved.

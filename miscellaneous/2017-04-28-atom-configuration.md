@@ -1,4 +1,6 @@
 # Atom Configuration
+> :calendar: *April 28, 2017*
+
 This is my setup for Atom.  
 
 Atom has a massive ecosystem of packages, which I view as both a pro and a con. On the pro side, you can customize Atom to your heart's content, and many of the most popular packages are actively maintained and updated. On the con side, if you're just getting started with Atom, you have thousands of packages to filter through, and many are duplicates of other packages or abandoned (which could break with an Atom update). Because of all the packages, you'll get prompted to install updates fairly frequently.  

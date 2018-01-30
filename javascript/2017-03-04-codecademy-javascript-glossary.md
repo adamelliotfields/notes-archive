@@ -1,4 +1,5 @@
 # Codecademy JavaScript Glossary
+> :calendar: *March 4, 2017*
 
 ### Accessing array elements
 You can get elements out of arrays if you know their index. Array elements' indexes start at 0 and increment by 1, so the first element's index is 0, the second element's index is 1, the third element's is 2, etc.

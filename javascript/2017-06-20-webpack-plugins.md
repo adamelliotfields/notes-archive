@@ -1,4 +1,6 @@
 # Webpack Plugins
+> :calendar: *June 20, 2017*
+
 This is a running list of Webpack plugins I've tried and like (i.e., they actually work).
 
 ### [case-sensitive-paths-webpack-plugin](https://github.com/Urthen/case-sensitive-paths-webpack-plugin)

@@ -1,4 +1,6 @@
 # React Notes
+> :calendar: *February 26, 2017*
+
 React.js is a JavaScript library. It was developed by engineers at Facebook.
 
 React is fast. Apps made in React can handle complex updates and still feel quick and responsive.

@@ -1,5 +1,7 @@
 # React Redux Notes
-> Notes on Redux as well as its React bindings.
+> :calendar: *August 7, 2017*
+
+Notes on Redux as well as its React bindings.
 
 ## Redux
 Redux is a JavaScript state management library that can be used with any framework (or no framework

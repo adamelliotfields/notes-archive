@@ -1,4 +1,5 @@
 # PHP Reference
+> :calendar: *February 27, 2017*
 
 ### [String Functions](http://php.net/manual/en/ref.strings.php)
 

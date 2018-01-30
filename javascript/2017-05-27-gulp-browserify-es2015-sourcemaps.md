@@ -1,4 +1,6 @@
 # Gulp Browserify ES2015 Sourcemaps
+> :calendar: *May 27, 2017*
+
 The "official" [recipe](http://gulpjs.org/recipes/browserify-uglify-sourcemap.html) on the Gulp site assumes your code is ES5 or has been compiled by Babel to ES5.  
 
 By using [gulp-uglify](https://github.com/terinjokes/gulp-uglify)'s composer, you can use whatever version of UglifyJS you want. [uglify-es](https://www.npmjs.com/package/uglify-es) has a built-in ES2015 parser and an API that is compatable with UglifyJS.

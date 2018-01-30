@@ -1,4 +1,5 @@
 # NextJS Notes
+> :calendar: *November 19, 2017*
 
 ### Routing
 

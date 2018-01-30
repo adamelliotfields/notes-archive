@@ -1,4 +1,5 @@
 # Codecademy CSS Glossary
+> :calendar: *March 5, 2017*
 
 ### Comments
 Comments in CSS are signified by a forward-slash and asterisk.

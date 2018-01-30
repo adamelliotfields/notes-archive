@@ -1,4 +1,6 @@
 # Cloud9 Initial Setup
+> :calendar: *April 27, 2017*
+
 These are my steps for setting up a VM on [Cloud9](https://c9.io), starting with a blank workspace (presently Ubuntu 14.04 Trusty Tahr).  
 
 Cloud9 is great for showing off your app or having a friend collaborate on it with you in realtime. However, you should use Terminal on macOS or PowerShell/Bash-on-Windows for your everyday haxing. Why? Unless you're using a Chromebook, chances are your computer is significantly more powerful than your virtual machine on Cloud9. You're also given a limited amount of space, and `npm install`ing tons of dependencies can fill it up quickly. You should also learn how your own computer works under the hood.  

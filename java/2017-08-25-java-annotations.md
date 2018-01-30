@@ -1,5 +1,7 @@
 # Java Annotations
-> "There is nothing quite so helpful and satisfying as a well-described public API." - Robert C. Martin, Clean Code
+> :calendar: *August 25, 2017*
+
+*"There is nothing quite so helpful and satisfying as a well-described public API."* - Robert C. Martin, Clean Code
 
 ### `@Override`
 Instructs the compiler to verify proper inheritance. Specifically, it verifies proper overriding of methods.

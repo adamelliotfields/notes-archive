@@ -1,4 +1,6 @@
 # Stylelint Configuration
+> :calendar: *May 22, 2017*
+
 [Stylelint](https://stylelint.io) is a powerful linter, similar to ESLint, that can be configured using rules. Stylelint is powered by PostCSS, so it understands CSS-like syntaxes like SugarSS.  
 
 ### Install Stylelint
