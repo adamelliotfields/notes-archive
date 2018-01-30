@@ -93,6 +93,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Importing a CSV into MongoDB](https://github.com/adamelliotfields/notes/blob/master/mongodb/2017-03-19-importing-a-csv-into-mongodb.md)
 
 ### Linux
+  - [Ubuntu Server Provisioning Notes](https://github.com/adamelliotfields/notes/blob/master/linux/2018-01-29-ubuntu-server-provisioning-notes.md)
   - [Command Line Guide](https://github.com/adamelliotfields/notes/blob/master/linux/2017-05-23-command-line-guide.md)
   - [Cloud9 Initial Setup](https://github.com/adamelliotfields/notes/blob/master/linux/2017-04-27-cloud9-initial-setup.md)
   - [Codecademy Command Line Glossary](https://github.com/adamelliotfields/notes/blob/master/linux/2017-02-12-codecademy-command-line-glossary.md)
@@ -121,6 +122,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Python Notes](https://github.com/adamelliotfields/notes/blob/master/python/2017-02-07-python-notes.md)
 
 ### Miscellaneous
+  - [Vultr DNS Setup with Google Domains](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2018-01-29-vultr-dns-setup-with-google-domains.md)
   - [Glitch Notes](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2017-11-16-glitch-notes.md)
   - [Public APIs](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2017-09-13-public-apis.md)
   - [Unit Testing Notes](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2017-08-25-unit-testing-notes.md)
