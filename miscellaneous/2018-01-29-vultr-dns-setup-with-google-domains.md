@@ -35,6 +35,8 @@ Click on your server, then click "Settings".
 
 Under "Public Network", click on the existing Reverse DNS entry, and set it to your domain.
 
+Do the same for IPv6 as well.
+
 ### Configure Google Domains Name Servers
 
 In Google Domains, click "DNS" next to your domain name.
