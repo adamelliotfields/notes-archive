@@ -29,7 +29,7 @@ Before SSHing into your VMs, log in using the remote terminal (the window launch
 You'll need to install `openssh-server` at the very least (my distribution did not install it by
 default).
 
-Run `ip address` to list your IPv6 address for each VM.
+Run `ip address` to list your IPv4 address for each VM.
 
 ### Check Your Network
 
