@@ -97,8 +97,13 @@ initial-cluster-state: 'new'
 strict-reconfig-check: true
 ```
 
-Once you've finished configuring each VM, you can start the service:
+Once you've finished configuring each VM, you can start the service on each machine:
 
 ```bash
 sudo systemctl restart snap.etcd.etcd.service
 ```
+
+You should now be able to run `etcdctl cluster-health` and see that your cluster is healthy.
+
+Check out the [admin guide](https://coreos.com/etcd/docs/latest/v2/admin_guide.html) for more
+information.
