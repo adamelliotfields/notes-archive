@@ -1,8 +1,7 @@
-# Docker Katacoda Notes
+# Docker Notes
 > :calendar: *February 19, 2018*
 
-Notes from Katacoda's Docker course. Most of these are copy/pasted, so credit goes to
-[Ben Hall](https://github.com/BenHall) - the creator of the course and Katacoda.com itself.
+Notes from Katacoda's Docker course as well as the Docker docs.
 
 ### What Is Docker?
 
@@ -79,6 +78,7 @@ docker run \
 --detach \
 --name redis \
 --mount source=redis,target=/data \
+--publish 6379:6379 \
 redis:latest
 ```
 
@@ -110,45 +110,90 @@ pull the image from Docker Hub. By default, the `latest` version is used, unless
 
 Flags:
   * `-d, --detach` - runs the container in the background
-  * `-p, --publish`
+  * `-p, --publish` - publishes a container's port to the host.
   * `-v, --volume` - binds a host directory to a directory in the container to persist data
-  * `--name`
+  * `-e, --env` - sets environment variables
+  * `--name` - assigns a name to the container (Docker will generate a random name if not specified)
+  * `--mount` - attaches a filesystem mount to the container
+  * `--network` - connects the container to a specific network
+  * `--rm` - automatically remove the container when it exits
   * `-it` - runs the container in the foreground with an interactive TTY; shorthand for `--interactive --tty`
+
+See <https://docs.docker.com/engine/reference/commandline/run/>
+
+### `docker stop`
+
+Stops one or more running containers. Docker will attempt to stop the process inside the container
+using `SIGTERM`, followed by `SIGKILL` after a grace period.
+
+Pass the `--time` flag to specify how long to wait before sending the kill signal.
+
+### `docker start`
+
+Starts one or more stopped containers.
+
+### `docker restart`
+
+Restarts one or more containers. Pass the `--time` flag to specify how long to wait before killing
+the container.
 
 ### `docker ps`
 
 Lists all running containers. An alias for `docker container list`.
 
+### `docker rm`
+
+Removes one or more containers.
+
+### `docker rmi`
+
+Removes one or more images.
+
 ### `docker inspect`
+
+Returns information on Docker objects in JSON format.
+
+See <https://docs.docker.com/engine/reference/commandline/inspect/>
 
 ### `docker logs`
 
+Prints the logs present at the time of execution. Pass the `--follow` flag to continue streaming
+logs.
+
 ### `docker port`
+
+Lists port mappings for the container.
 
 ## Docker Container Commands
 
 ### `docker container ls`
 
-### `docker container inspect`
-
-Prints detailed information about the container in JSON format.
-
-### `docker container stop`
-
-### `docker container start`
-
-### `docker container restart`
+Lists all running containers. Pass the `--all` flag to include stopped containers.
 
 ### `docker container prune`
+
+Removes all stopped containers.
 
 ## Docker Image Commands
 
 ## `docker image ls`
 
+Lists images. Pass the `--all` flag to view intermediate images.
+
 ## Docker Volume Commands
 
-## `docker volume ls`
+### `docker volume ls`
 
-## `docker volume create`
+Lists volumes.
 
-## `docker volume rm`
+### `docker volume create`
+
+Creates a volume that containers can use to consume and store data.
+
+### `docker volume rm`
+
+Removes one or more volumes.
+
+### `docker volume prune`
+
+Removes all unused volumes.
