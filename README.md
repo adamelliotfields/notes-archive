@@ -92,8 +92,9 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
 ### MongoDB
   - [Importing a CSV into MongoDB](https://github.com/adamelliotfields/notes/blob/master/mongodb/2017-03-19-importing-a-csv-into-mongodb.md)
 
-### Kubernetes
-  - [Setting Up an ETCD Cluster with Ubuntu Snappy](https://github.com/adamelliotfields/notes/blob/master/kubernetes/2018-02-04-setting-up-an-etcd-cluster-with-ubuntu-snappy.md)
+### Containers
+  - [Kubernetes Notes](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-21-kubernetes-notes.md)
+  - [Setting Up an ETCD Cluster with Ubuntu Snappy](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-04-setting-up-an-etcd-cluster-with-ubuntu-snappy.md)
 
 ### Linux
   - [Ubuntu Server Provisioning Notes](https://github.com/adamelliotfields/notes/blob/master/linux/2018-01-29-ubuntu-server-provisioning-notes.md)
