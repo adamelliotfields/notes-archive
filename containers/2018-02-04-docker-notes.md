@@ -52,6 +52,29 @@ redis:latest redis-server --appendonly yes
 
 See <https://docs.docker.com/storage/volumes/>
 
+### Container Networking
+
+Some containers don't need to communicate with the outside world and only need to interact with each
+other. An example would be a blog application connected to a database.
+
+You could run the blog and database on the host network (localhost). If the blog exposed port 80 and
+the database exposed port 3306 (MySQL), then both containers would be accessible on `localhost:80`
+and `localhost:3306` respectively.
+
+You could also use the default bridge network, and bind the IP of the containers to `127.0.0.1` with
+their respective exposed ports.
+
+Docker does have a `--link` flag which allows containers to communicate with one another without
+knowing their assigned IP addresses, but this feature is deprecated, so you should stop using it.
+
+The recommended approach is to create a _user-defined network_. This sounds complicated, but it
+really consists of running `docker network create USER_DEFINED_NETWORK`. User-defined networks have
+and embedded DNS to resolve container names to IP addresses.
+
+In order for the DNS to work, containers must be passed the `--name` and `--network` flags at
+creation time. In the actual code for the application running in the container, you can use the
+container name instead of the actual IP address, for example, `mongodb://my_mongo_container:27017`.
+
 ### Running a Container in the Foreground
 
 In most cases you'll run Docker applications in the background, but sometimes you may want to run
