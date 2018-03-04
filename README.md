@@ -95,6 +95,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
 ### Containers
   - [Kubernetes Notes](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-21-kubernetes-notes.md)
   - [Setting Up an ETCD Cluster with Ubuntu Snappy](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-04-setting-up-an-etcd-cluster-with-ubuntu-snappy.md)
+  - [Docker Notes](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-04-docker-notes.md)
 
 ### Linux
   - [Ubuntu Server Provisioning Notes](https://github.com/adamelliotfields/notes/blob/master/linux/2018-01-29-ubuntu-server-provisioning-notes.md)
