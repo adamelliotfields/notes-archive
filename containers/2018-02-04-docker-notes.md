@@ -1,5 +1,5 @@
 # Docker Notes
-> :calendar: *February 19, 2018*
+> :calendar: *February 4, 2018*
 
 Notes from Katacoda's Docker course as well as the Docker docs.
 
