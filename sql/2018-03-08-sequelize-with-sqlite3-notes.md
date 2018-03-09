@@ -31,9 +31,11 @@ sequelize init
 
 ### Create Databases
 
-You'll want to create *development*, *test*, and *production* databases. Sequelize can do this for
-you if you're using a database server like MySQL or Postgres, but for SQLite3 you'll have to create
-the database files yourself.
+You'll want to create *development*, *test*, and *production* databases. Or, you can create a single
+database and use it for all 3 environments in your config file.
+
+Sequelize can do this for you if you're using a database server like MySQL or Postgres, but for
+SQLite3 you'll have to create the database files yourself.
 
 ```bash
 # Create the data folder
@@ -149,11 +151,21 @@ module.exports = {
 
 module.exports = (sequelize, DataTypes) => {
   var Post = sequelize.define('Post', {
-    id: DataTypes.STRING,
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false
+    },
     title: DataTypes.STRING,
     body: DataTypes.TEXT,
-    createdAt: DataTypes.STRING,
-    updatedAt: DataTypes.STRING
+    createdAt: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    updatedAt: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   }, {});
 
   Post.associate = (models) => {
