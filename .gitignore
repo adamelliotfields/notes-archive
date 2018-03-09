@@ -1,2 +1,11 @@
+# jetbrains
 .idea/
+
+# vs code
+.vscode/
+
+# macos
 .DS_Store
+
+# kde
+.directory

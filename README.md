@@ -83,6 +83,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Java Notes](https://github.com/adamelliotfields/notes/blob/master/java/2017-08-14-java-notes.md)
 
 ### SQL
+  - [Sequelize with SQLite3 Notes](https://github.com/adamelliotfields/notes/blob/master/sql/2018-03-08-sequelize-with-sqlite3-notes.md)
   - [Treehouse SQL Reference](https://github.com/adamelliotfields/notes/blob/master/sql/2017-03-18-treehouse-sql-reference.md)
   - [PostgreSQL Notes](https://github.com/adamelliotfields/notes/blob/master/sql/2017-03-15-postgresql-notes.md)
   - [Codecademy SQL Glossary](https://github.com/adamelliotfields/notes/blob/master/sql/2017-03-04-codecademy-sql-glossary.md)
