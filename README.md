@@ -99,6 +99,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Docker Notes](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-04-docker-notes.md)
 
 ### Linux
+  - [How to Make an Unattended Ubuntu ISO](https://github.com/adamelliotfields/notes/blob/master/linux/2018-03-16-how-to-make-an-unattended-ubuntu-iso.md)
   - [Ubuntu Server Provisioning Notes](https://github.com/adamelliotfields/notes/blob/master/linux/2018-01-29-ubuntu-server-provisioning-notes.md)
   - [Command Line Guide](https://github.com/adamelliotfields/notes/blob/master/linux/2017-05-23-command-line-guide.md)
   - [Cloud9 Initial Setup](https://github.com/adamelliotfields/notes/blob/master/linux/2017-04-27-cloud9-initial-setup.md)
