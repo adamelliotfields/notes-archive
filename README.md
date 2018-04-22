@@ -97,6 +97,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Kubernetes Notes](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-21-kubernetes-notes.md)
   - [Setting Up an ETCD Cluster with Ubuntu Snappy](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-04-setting-up-an-etcd-cluster-with-ubuntu-snappy.md)
   - [Docker Notes](https://github.com/adamelliotfields/notes/blob/master/containers/2018-02-04-docker-notes.md)
+  - [Docker Bash Shortcuts](https://github.com/adamelliotfields/notes/blob/master/containers/2018-04-22-docker-bash-shortcuts.md)
 
 ### Linux
   - [How to Make an Unattended Ubuntu ISO](https://github.com/adamelliotfields/notes/blob/master/linux/2018-03-16-how-to-make-an-unattended-ubuntu-iso.md)
