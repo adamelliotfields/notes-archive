@@ -100,6 +100,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Docker Bash Shortcuts](https://github.com/adamelliotfields/notes/blob/master/containers/2018-04-22-docker-bash-shortcuts.md)
 
 ### Linux
+  - [How to Remove LXD](https://github.com/adamelliotfields/notes/blob/master/linux/2018-05-10-how-to-remove-lxd.md)
   - [How to Make an Unattended Ubuntu ISO](https://github.com/adamelliotfields/notes/blob/master/linux/2018-03-16-how-to-make-an-unattended-ubuntu-iso.md)
   - [Ubuntu Server Provisioning Notes](https://github.com/adamelliotfields/notes/blob/master/linux/2018-01-29-ubuntu-server-provisioning-notes.md)
   - [Command Line Guide](https://github.com/adamelliotfields/notes/blob/master/linux/2017-05-23-command-line-guide.md)
