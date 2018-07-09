@@ -6,8 +6,8 @@ gives me access to a simple Version Control System that is built into every text
 GitHub automatically renders the Markdown to HTML and applies the appropriate syntax highlighting
 for code snippets.
 
-I'm using VS Code, and I find the Markdown All-in-One extension to be helpful. To preview notes, I
-use my own custom Sass [theme](https://github.com/adamelliotfields/vscode-github-markdown-css).
+For a Markdown editor, I'm using VS Code, and I find the Markdown All-in-One extension to be
+helpful.
 
 Notes are sorted by topic, and filenames are prefixed with the date in `YYYY-MM-DD` format.
 
