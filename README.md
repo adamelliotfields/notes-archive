@@ -18,6 +18,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
 ## Topics
 
 ### JavaScript
+  - [Enzyme Render Methods](https://github.com/adamelliotfields/notes/blob/master/javascript/2018-06-03-enzyme-render-methods.md)
   - [JavaScript Sandbox Comparison](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-11-29-javascript-sandbox-comparison.md)
   - [NextJS Notes](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-11-19-nextjs-notes.md)
   - [JavaScript Framework Comparison](https://github.com/adamelliotfields/notes/blob/master/javascript/2017-10-22-javascript-framework-comparison.md)
