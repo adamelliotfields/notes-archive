@@ -132,6 +132,7 @@ a question, please by all means open an [issue](https://github.com/adamelliotfie
   - [Python Notes](https://github.com/adamelliotfields/notes/blob/master/python/2017-02-07-python-notes.md)
 
 ### Miscellaneous
+  - [Headless CMS Comparison](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2018-07-10-headless-cms-comparison.md)
   - [Logging Examples](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2018-04-14-logging-examples.md)
   - [Ghost Nginx Notes](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2018-04-10-ghost-nginx-notes.md)
   - [OWASP Top 10 Notes](https://github.com/adamelliotfields/notes/blob/master/miscellaneous/2018-03-28-owasp-top-10-notes.md)
