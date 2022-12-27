@@ -1,19 +1,13 @@
 # Notes
 > :memo: *My repository for notes and ideas written in Markdown.*
 
-I use Git to keep track of my notes instead of a dedicated cloud-based note-taking app. Using Git
-gives me access to a simple Version Control System that is built into every text editor I use.
-GitHub automatically renders the Markdown to HTML and applies the appropriate syntax highlighting
-for code snippets.
+## Notice
 
-For a Markdown editor, I'm using VS Code, and I find the Markdown All-in-One extension to be
-helpful.
+I'm archiving this repo in December 2022. As you can see from the commit history, I haven't been using a manual Git repo for almost a half-decade. In fact, this repo started as an export from the first note-taking app I used, [Quiver](https://yliansoft.com).
 
-Notes are sorted by topic, and filenames are prefixed with the date in `YYYY-MM-DD` format.
+I think I envisioned publishing my notes using one of the various Markdown-to-React site generators, but then I realized that I should focus more on taking more frequent and higher-quality notes than perusing an infinite list of JavaScript libraries to turn my notes into web apps.
 
-Some of these notes are incomplete, and some may be outdated, so apologies if you stumbled upon this
-repository and didn't find the solution you were looking for. If something is incorrect or you have
-a question, please by all means open an [issue](https://github.com/adamelliotfields/notes/issues)!
+If you're interested, I've been using [Bear](https://bear.app) for notes and [Things](https://culturedcode.com/things/) for todos with iCloud for a while now. For rendering my Bear notes, I use [Marked](https://marked2app.com). For editing actual Markdown files on the filesystem, I use [IA Writer](https://ia.net/writer) when I'm not using a code editor. Bear and Things provide native iPad and iPhone apps for the rare instances I'm on a Linux or Windows PC and need to jot something down.
 
 ## Topics
 
